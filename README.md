@@ -117,7 +117,7 @@ Project/
 - **Center panel**: selected object detail payload (constructor signature, class info, domain fields) and sprite view.
 - **Right panel**: inheritance chain and composition/aggregation relationships, pulled directly from the introspected class graph.
 - **Lower tabs**: Moves/Abilities, Stats, Identity, Evolution, and **UML** (auto-generated ASCII class diagram for the current selection).
-- Navigation supports arrow keys and Enter on the tree; focus shortcuts: `1` nav, `2` details, `3` relationships, `4` tabs, `u` jump to UML tab, `[` / `]` prev/next sub-tab, `q` quit.
+- Navigation supports arrow keys and Enter on the tree; focus shortcuts: `1` nav, `2` details, `3` relationships, `4` tabs, `u` jump to UML tab, `[` / `]` prev/next sub-tab, `x` unselect, `q` quit.
 
 ## OOP Modeling Highlights
 
