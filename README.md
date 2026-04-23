@@ -175,6 +175,7 @@ Plus: two seeded trainers (`Red`, `Champion Steven`) owning the example party, n
 
 ## Credits
 
+- **Pokemon data** — species, stats, move definitions, abilities, and evolution chains are fetched from [PokeAPI](https://pokeapi.co/) (cached locally in `pokeapi_cache.json`). Thanks to the PokeAPI maintainers for the free, open dataset.
 - **Pokemon sprites** — all ANSI Pokemon sprites under `sprites/regular/` and `sprites/shiny/` come from [pokemon-colorscripts](https://gitlab.com/phoneybadger/pokemon-colorscripts) by phoneybadger. Huge thanks for the beautiful half-block renditions.
 - **Trainer sprites** — the Red and Steven sprites are hand-drawn by me (pixel grid + ANSI half-block encoder). The quality gap between them and the phoneybadger sprites should be immediately, painfully obvious.
 
