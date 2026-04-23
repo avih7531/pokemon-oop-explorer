@@ -1,0 +1,26 @@
+@startuml uc-4_moves_abilities
+!include ../../_theme.iuml
+
+title UC-4 — Review moves and abilities
+
+|Student|
+start
+:Select a species or instance;
+|System|
+:Gather `learnset.moves_by_level` and `possible_abilities`
+(species scope)
+or `move_slots` and `chosen_ability` (instance scope);
+:Serialize to the Moves/Abilities tab payload;
+|Student|
+:Press `]` (or click) to focus Moves/Abilities tab;
+|System|
+:Display moves, categories, types, and ability effects;
+|Student|
+if (Inspect a specific ability?) then (yes)
+    :Click the class name in relationships;
+    |System|
+    :Focus UML on `PassiveAbility` / `TriggeredAbility`;
+endif
+stop
+
+@enduml

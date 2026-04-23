@@ -1,0 +1,3498 @@
+{
+  "pokemon": {
+    "bulbasaur": {
+      "id": 1,
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "hp": 45,
+        "attack": 49,
+        "defense": 49,
+        "special-attack": 65,
+        "special-defense": 65,
+        "speed": 45
+      },
+      "abilities": [
+        {
+          "name": "overgrow",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "chlorophyll",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "tackle",
+          "level": 1
+        },
+        {
+          "name": "growl",
+          "level": 4
+        },
+        {
+          "name": "leech-seed",
+          "level": 7
+        },
+        {
+          "name": "vine-whip",
+          "level": 10
+        },
+        {
+          "name": "poison-powder",
+          "level": 15
+        },
+        {
+          "name": "sleep-powder",
+          "level": 15
+        },
+        {
+          "name": "razor-leaf",
+          "level": 20
+        },
+        {
+          "name": "sweet-scent",
+          "level": 25
+        },
+        {
+          "name": "growth",
+          "level": 32
+        },
+        {
+          "name": "synthesis",
+          "level": 39
+        },
+        {
+          "name": "solar-beam",
+          "level": 46
+        }
+      ],
+      "generation": "generation-i",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/1/",
+      "_complete": true
+    },
+    "ivysaur": {
+      "id": 2,
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 62,
+        "defense": 63,
+        "special-attack": 80,
+        "special-defense": 80,
+        "speed": 60
+      },
+      "abilities": [
+        {
+          "name": "overgrow",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "chlorophyll",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "growl",
+          "level": 1
+        },
+        {
+          "name": "leech-seed",
+          "level": 1
+        },
+        {
+          "name": "tackle",
+          "level": 1
+        },
+        {
+          "name": "growl",
+          "level": 4
+        },
+        {
+          "name": "leech-seed",
+          "level": 7
+        },
+        {
+          "name": "vine-whip",
+          "level": 10
+        },
+        {
+          "name": "poison-powder",
+          "level": 15
+        },
+        {
+          "name": "sleep-powder",
+          "level": 15
+        },
+        {
+          "name": "razor-leaf",
+          "level": 22
+        },
+        {
+          "name": "sweet-scent",
+          "level": 29
+        },
+        {
+          "name": "growth",
+          "level": 38
+        },
+        {
+          "name": "synthesis",
+          "level": 47
+        },
+        {
+          "name": "solar-beam",
+          "level": 56
+        }
+      ],
+      "generation": "generation-i",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/1/",
+      "_complete": true
+    },
+    "venusaur": {
+      "id": 3,
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "stats": {
+        "hp": 80,
+        "attack": 82,
+        "defense": 83,
+        "special-attack": 100,
+        "special-defense": 100,
+        "speed": 80
+      },
+      "abilities": [
+        {
+          "name": "overgrow",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "chlorophyll",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "growl",
+          "level": 1
+        },
+        {
+          "name": "leech-seed",
+          "level": 1
+        },
+        {
+          "name": "tackle",
+          "level": 1
+        },
+        {
+          "name": "vine-whip",
+          "level": 1
+        },
+        {
+          "name": "growl",
+          "level": 4
+        },
+        {
+          "name": "leech-seed",
+          "level": 7
+        },
+        {
+          "name": "vine-whip",
+          "level": 10
+        },
+        {
+          "name": "poison-powder",
+          "level": 15
+        },
+        {
+          "name": "sleep-powder",
+          "level": 15
+        },
+        {
+          "name": "razor-leaf",
+          "level": 22
+        },
+        {
+          "name": "sweet-scent",
+          "level": 29
+        },
+        {
+          "name": "growth",
+          "level": 41
+        },
+        {
+          "name": "synthesis",
+          "level": 53
+        },
+        {
+          "name": "solar-beam",
+          "level": 65
+        }
+      ],
+      "generation": "generation-i",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/1/",
+      "_complete": true
+    },
+    "charmander": {
+      "id": 4,
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 39,
+        "attack": 52,
+        "defense": 43,
+        "special-attack": 60,
+        "special-defense": 50,
+        "speed": 65
+      },
+      "abilities": [
+        {
+          "name": "blaze",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "solar-power",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "growl",
+          "level": 1
+        },
+        {
+          "name": "scratch",
+          "level": 1
+        },
+        {
+          "name": "ember",
+          "level": 7
+        },
+        {
+          "name": "smokescreen",
+          "level": 13
+        },
+        {
+          "name": "rage",
+          "level": 19
+        },
+        {
+          "name": "scary-face",
+          "level": 25
+        },
+        {
+          "name": "flamethrower",
+          "level": 31
+        },
+        {
+          "name": "slash",
+          "level": 37
+        },
+        {
+          "name": "dragon-rage",
+          "level": 43
+        },
+        {
+          "name": "fire-spin",
+          "level": 49
+        }
+      ],
+      "generation": "generation-i",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/2/",
+      "_complete": true
+    },
+    "charmeleon": {
+      "id": 5,
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 58,
+        "attack": 64,
+        "defense": 58,
+        "special-attack": 80,
+        "special-defense": 65,
+        "speed": 80
+      },
+      "abilities": [
+        {
+          "name": "blaze",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "solar-power",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "ember",
+          "level": 1
+        },
+        {
+          "name": "growl",
+          "level": 1
+        },
+        {
+          "name": "scratch",
+          "level": 1
+        },
+        {
+          "name": "ember",
+          "level": 7
+        },
+        {
+          "name": "smokescreen",
+          "level": 13
+        },
+        {
+          "name": "rage",
+          "level": 20
+        },
+        {
+          "name": "scary-face",
+          "level": 27
+        },
+        {
+          "name": "flamethrower",
+          "level": 34
+        },
+        {
+          "name": "slash",
+          "level": 41
+        },
+        {
+          "name": "dragon-rage",
+          "level": 48
+        },
+        {
+          "name": "fire-spin",
+          "level": 55
+        }
+      ],
+      "generation": "generation-i",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/2/",
+      "_complete": true
+    },
+    "charizard": {
+      "id": 6,
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "stats": {
+        "hp": 78,
+        "attack": 84,
+        "defense": 78,
+        "special-attack": 109,
+        "special-defense": 85,
+        "speed": 100
+      },
+      "abilities": [
+        {
+          "name": "blaze",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "solar-power",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "ember",
+          "level": 1
+        },
+        {
+          "name": "growl",
+          "level": 1
+        },
+        {
+          "name": "scratch",
+          "level": 1
+        },
+        {
+          "name": "smokescreen",
+          "level": 1
+        },
+        {
+          "name": "ember",
+          "level": 7
+        },
+        {
+          "name": "smokescreen",
+          "level": 13
+        },
+        {
+          "name": "rage",
+          "level": 20
+        },
+        {
+          "name": "scary-face",
+          "level": 27
+        },
+        {
+          "name": "flamethrower",
+          "level": 34
+        },
+        {
+          "name": "wing-attack",
+          "level": 36
+        },
+        {
+          "name": "slash",
+          "level": 44
+        },
+        {
+          "name": "dragon-rage",
+          "level": 54
+        },
+        {
+          "name": "fire-spin",
+          "level": 64
+        }
+      ],
+      "generation": "generation-i",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/2/",
+      "_complete": true
+    },
+    "squirtle": {
+      "id": 7,
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 44,
+        "attack": 48,
+        "defense": 65,
+        "special-attack": 50,
+        "special-defense": 64,
+        "speed": 43
+      },
+      "abilities": [
+        {
+          "name": "torrent",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "rain-dish",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "tackle",
+          "level": 1
+        },
+        {
+          "name": "tail-whip",
+          "level": 4
+        },
+        {
+          "name": "bubble",
+          "level": 7
+        },
+        {
+          "name": "withdraw",
+          "level": 10
+        },
+        {
+          "name": "water-gun",
+          "level": 13
+        },
+        {
+          "name": "bite",
+          "level": 18
+        },
+        {
+          "name": "rapid-spin",
+          "level": 23
+        },
+        {
+          "name": "protect",
+          "level": 28
+        },
+        {
+          "name": "rain-dance",
+          "level": 33
+        },
+        {
+          "name": "skull-bash",
+          "level": 40
+        },
+        {
+          "name": "hydro-pump",
+          "level": 47
+        }
+      ],
+      "generation": "generation-i",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/3/",
+      "_complete": true
+    },
+    "wartortle": {
+      "id": 8,
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 59,
+        "attack": 63,
+        "defense": 80,
+        "special-attack": 65,
+        "special-defense": 80,
+        "speed": 58
+      },
+      "abilities": [
+        {
+          "name": "torrent",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "rain-dish",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "bubble",
+          "level": 1
+        },
+        {
+          "name": "tackle",
+          "level": 1
+        },
+        {
+          "name": "tail-whip",
+          "level": 1
+        },
+        {
+          "name": "tail-whip",
+          "level": 4
+        },
+        {
+          "name": "bubble",
+          "level": 7
+        },
+        {
+          "name": "withdraw",
+          "level": 10
+        },
+        {
+          "name": "water-gun",
+          "level": 13
+        },
+        {
+          "name": "bite",
+          "level": 19
+        },
+        {
+          "name": "rapid-spin",
+          "level": 25
+        },
+        {
+          "name": "protect",
+          "level": 31
+        },
+        {
+          "name": "rain-dance",
+          "level": 37
+        },
+        {
+          "name": "skull-bash",
+          "level": 45
+        },
+        {
+          "name": "hydro-pump",
+          "level": 53
+        }
+      ],
+      "generation": "generation-i",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/3/",
+      "_complete": true
+    },
+    "blastoise": {
+      "id": 9,
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 79,
+        "attack": 83,
+        "defense": 100,
+        "special-attack": 85,
+        "special-defense": 105,
+        "speed": 78
+      },
+      "abilities": [
+        {
+          "name": "torrent",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "rain-dish",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "bubble",
+          "level": 1
+        },
+        {
+          "name": "tackle",
+          "level": 1
+        },
+        {
+          "name": "tail-whip",
+          "level": 1
+        },
+        {
+          "name": "withdraw",
+          "level": 1
+        },
+        {
+          "name": "tail-whip",
+          "level": 4
+        },
+        {
+          "name": "bubble",
+          "level": 7
+        },
+        {
+          "name": "withdraw",
+          "level": 10
+        },
+        {
+          "name": "water-gun",
+          "level": 13
+        },
+        {
+          "name": "bite",
+          "level": 19
+        },
+        {
+          "name": "rapid-spin",
+          "level": 25
+        },
+        {
+          "name": "protect",
+          "level": 31
+        },
+        {
+          "name": "rain-dance",
+          "level": 42
+        },
+        {
+          "name": "skull-bash",
+          "level": 55
+        },
+        {
+          "name": "hydro-pump",
+          "level": 68
+        }
+      ],
+      "generation": "generation-i",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/3/",
+      "_complete": true
+    },
+    "chikorita": {
+      "id": 152,
+      "types": [
+        "grass"
+      ],
+      "stats": {
+        "hp": 45,
+        "attack": 49,
+        "defense": 65,
+        "special-attack": 49,
+        "special-defense": 65,
+        "speed": 45
+      },
+      "abilities": [
+        {
+          "name": "overgrow",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "leaf-guard",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "growl",
+          "level": 1
+        },
+        {
+          "name": "tackle",
+          "level": 1
+        },
+        {
+          "name": "razor-leaf",
+          "level": 8
+        },
+        {
+          "name": "reflect",
+          "level": 12
+        },
+        {
+          "name": "poison-powder",
+          "level": 15
+        },
+        {
+          "name": "synthesis",
+          "level": 22
+        },
+        {
+          "name": "body-slam",
+          "level": 29
+        },
+        {
+          "name": "light-screen",
+          "level": 36
+        },
+        {
+          "name": "safeguard",
+          "level": 43
+        },
+        {
+          "name": "solar-beam",
+          "level": 50
+        }
+      ],
+      "generation": "generation-ii",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/79/",
+      "_complete": true
+    },
+    "bayleef": {
+      "id": 153,
+      "types": [
+        "grass"
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 62,
+        "defense": 80,
+        "special-attack": 63,
+        "special-defense": 80,
+        "speed": 60
+      },
+      "abilities": [
+        {
+          "name": "overgrow",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "leaf-guard",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "growl",
+          "level": 1
+        },
+        {
+          "name": "razor-leaf",
+          "level": 1
+        },
+        {
+          "name": "reflect",
+          "level": 1
+        },
+        {
+          "name": "tackle",
+          "level": 1
+        },
+        {
+          "name": "razor-leaf",
+          "level": 8
+        },
+        {
+          "name": "reflect",
+          "level": 12
+        },
+        {
+          "name": "poison-powder",
+          "level": 15
+        },
+        {
+          "name": "synthesis",
+          "level": 23
+        },
+        {
+          "name": "body-slam",
+          "level": 31
+        },
+        {
+          "name": "light-screen",
+          "level": 39
+        },
+        {
+          "name": "safeguard",
+          "level": 47
+        },
+        {
+          "name": "solar-beam",
+          "level": 55
+        }
+      ],
+      "generation": "generation-ii",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/79/",
+      "_complete": true
+    },
+    "meganium": {
+      "id": 154,
+      "types": [
+        "grass"
+      ],
+      "stats": {
+        "hp": 80,
+        "attack": 82,
+        "defense": 100,
+        "special-attack": 83,
+        "special-defense": 100,
+        "speed": 80
+      },
+      "abilities": [
+        {
+          "name": "overgrow",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "leaf-guard",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "growl",
+          "level": 1
+        },
+        {
+          "name": "razor-leaf",
+          "level": 1
+        },
+        {
+          "name": "reflect",
+          "level": 1
+        },
+        {
+          "name": "tackle",
+          "level": 1
+        },
+        {
+          "name": "razor-leaf",
+          "level": 8
+        },
+        {
+          "name": "reflect",
+          "level": 12
+        },
+        {
+          "name": "poison-powder",
+          "level": 15
+        },
+        {
+          "name": "synthesis",
+          "level": 23
+        },
+        {
+          "name": "body-slam",
+          "level": 31
+        },
+        {
+          "name": "light-screen",
+          "level": 41
+        },
+        {
+          "name": "safeguard",
+          "level": 51
+        },
+        {
+          "name": "solar-beam",
+          "level": 61
+        }
+      ],
+      "generation": "generation-ii",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/79/",
+      "_complete": true
+    },
+    "cyndaquil": {
+      "id": 155,
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 39,
+        "attack": 52,
+        "defense": 43,
+        "special-attack": 60,
+        "special-defense": 50,
+        "speed": 65
+      },
+      "abilities": [
+        {
+          "name": "blaze",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "flash-fire",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "leer",
+          "level": 1
+        },
+        {
+          "name": "tackle",
+          "level": 1
+        },
+        {
+          "name": "smokescreen",
+          "level": 6
+        },
+        {
+          "name": "ember",
+          "level": 12
+        },
+        {
+          "name": "quick-attack",
+          "level": 19
+        },
+        {
+          "name": "flame-wheel",
+          "level": 27
+        },
+        {
+          "name": "swift",
+          "level": 36
+        },
+        {
+          "name": "flamethrower",
+          "level": 46
+        }
+      ],
+      "generation": "generation-ii",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/80/",
+      "_complete": true
+    },
+    "quilava": {
+      "id": 156,
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 58,
+        "attack": 64,
+        "defense": 58,
+        "special-attack": 80,
+        "special-defense": 65,
+        "speed": 80
+      },
+      "abilities": [
+        {
+          "name": "blaze",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "flash-fire",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "leer",
+          "level": 1
+        },
+        {
+          "name": "smokescreen",
+          "level": 1
+        },
+        {
+          "name": "tackle",
+          "level": 1
+        },
+        {
+          "name": "smokescreen",
+          "level": 6
+        },
+        {
+          "name": "ember",
+          "level": 12
+        },
+        {
+          "name": "quick-attack",
+          "level": 21
+        },
+        {
+          "name": "flame-wheel",
+          "level": 31
+        },
+        {
+          "name": "swift",
+          "level": 42
+        },
+        {
+          "name": "flamethrower",
+          "level": 54
+        }
+      ],
+      "generation": "generation-ii",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/80/",
+      "_complete": true
+    },
+    "typhlosion": {
+      "id": 157,
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 78,
+        "attack": 84,
+        "defense": 78,
+        "special-attack": 109,
+        "special-defense": 85,
+        "speed": 100
+      },
+      "abilities": [
+        {
+          "name": "blaze",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "flash-fire",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "ember",
+          "level": 1
+        },
+        {
+          "name": "leer",
+          "level": 1
+        },
+        {
+          "name": "smokescreen",
+          "level": 1
+        },
+        {
+          "name": "tackle",
+          "level": 1
+        },
+        {
+          "name": "smokescreen",
+          "level": 6
+        },
+        {
+          "name": "ember",
+          "level": 12
+        },
+        {
+          "name": "quick-attack",
+          "level": 21
+        },
+        {
+          "name": "flame-wheel",
+          "level": 31
+        },
+        {
+          "name": "swift",
+          "level": 45
+        },
+        {
+          "name": "flamethrower",
+          "level": 60
+        }
+      ],
+      "generation": "generation-ii",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/80/",
+      "_complete": true
+    },
+    "totodile": {
+      "id": 158,
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 50,
+        "attack": 65,
+        "defense": 64,
+        "special-attack": 44,
+        "special-defense": 48,
+        "speed": 43
+      },
+      "abilities": [
+        {
+          "name": "torrent",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "sheer-force",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "leer",
+          "level": 1
+        },
+        {
+          "name": "scratch",
+          "level": 1
+        },
+        {
+          "name": "rage",
+          "level": 7
+        },
+        {
+          "name": "water-gun",
+          "level": 13
+        },
+        {
+          "name": "bite",
+          "level": 20
+        },
+        {
+          "name": "scary-face",
+          "level": 27
+        },
+        {
+          "name": "slash",
+          "level": 35
+        },
+        {
+          "name": "screech",
+          "level": 43
+        },
+        {
+          "name": "hydro-pump",
+          "level": 52
+        }
+      ],
+      "generation": "generation-ii",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/81/",
+      "_complete": true
+    },
+    "croconaw": {
+      "id": 159,
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 65,
+        "attack": 80,
+        "defense": 80,
+        "special-attack": 59,
+        "special-defense": 63,
+        "speed": 58
+      },
+      "abilities": [
+        {
+          "name": "torrent",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "sheer-force",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "leer",
+          "level": 1
+        },
+        {
+          "name": "rage",
+          "level": 1
+        },
+        {
+          "name": "scratch",
+          "level": 1
+        },
+        {
+          "name": "rage",
+          "level": 7
+        },
+        {
+          "name": "water-gun",
+          "level": 13
+        },
+        {
+          "name": "bite",
+          "level": 21
+        },
+        {
+          "name": "scary-face",
+          "level": 28
+        },
+        {
+          "name": "slash",
+          "level": 37
+        },
+        {
+          "name": "screech",
+          "level": 45
+        },
+        {
+          "name": "hydro-pump",
+          "level": 55
+        }
+      ],
+      "generation": "generation-ii",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/81/",
+      "_complete": true
+    },
+    "feraligatr": {
+      "id": 160,
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 85,
+        "attack": 105,
+        "defense": 100,
+        "special-attack": 79,
+        "special-defense": 83,
+        "speed": 78
+      },
+      "abilities": [
+        {
+          "name": "torrent",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "sheer-force",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "leer",
+          "level": 1
+        },
+        {
+          "name": "rage",
+          "level": 1
+        },
+        {
+          "name": "scratch",
+          "level": 1
+        },
+        {
+          "name": "water-gun",
+          "level": 1
+        },
+        {
+          "name": "rage",
+          "level": 7
+        },
+        {
+          "name": "water-gun",
+          "level": 13
+        },
+        {
+          "name": "bite",
+          "level": 21
+        },
+        {
+          "name": "scary-face",
+          "level": 28
+        },
+        {
+          "name": "slash",
+          "level": 38
+        },
+        {
+          "name": "screech",
+          "level": 47
+        },
+        {
+          "name": "hydro-pump",
+          "level": 58
+        }
+      ],
+      "generation": "generation-ii",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/81/",
+      "_complete": true
+    },
+    "treecko": {
+      "id": 252,
+      "types": [
+        "grass"
+      ],
+      "stats": {
+        "hp": 40,
+        "attack": 45,
+        "defense": 35,
+        "special-attack": 65,
+        "special-defense": 55,
+        "speed": 70
+      },
+      "abilities": [
+        {
+          "name": "overgrow",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "unburden",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "leer",
+          "level": 1
+        },
+        {
+          "name": "pound",
+          "level": 1
+        },
+        {
+          "name": "absorb",
+          "level": 6
+        },
+        {
+          "name": "quick-attack",
+          "level": 11
+        },
+        {
+          "name": "pursuit",
+          "level": 16
+        },
+        {
+          "name": "screech",
+          "level": 21
+        },
+        {
+          "name": "mega-drain",
+          "level": 26
+        },
+        {
+          "name": "agility",
+          "level": 31
+        },
+        {
+          "name": "slam",
+          "level": 36
+        },
+        {
+          "name": "detect",
+          "level": 41
+        },
+        {
+          "name": "giga-drain",
+          "level": 46
+        }
+      ],
+      "generation": "generation-iii",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/130/",
+      "_complete": true
+    },
+    "grovyle": {
+      "id": 253,
+      "types": [
+        "grass"
+      ],
+      "stats": {
+        "hp": 50,
+        "attack": 65,
+        "defense": 45,
+        "special-attack": 85,
+        "special-defense": 65,
+        "speed": 95
+      },
+      "abilities": [
+        {
+          "name": "overgrow",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "unburden",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "absorb",
+          "level": 1
+        },
+        {
+          "name": "leer",
+          "level": 1
+        },
+        {
+          "name": "pound",
+          "level": 1
+        },
+        {
+          "name": "quick-attack",
+          "level": 1
+        },
+        {
+          "name": "absorb",
+          "level": 6
+        },
+        {
+          "name": "quick-attack",
+          "level": 11
+        },
+        {
+          "name": "fury-cutter",
+          "level": 16
+        },
+        {
+          "name": "pursuit",
+          "level": 17
+        },
+        {
+          "name": "screech",
+          "level": 23
+        },
+        {
+          "name": "leaf-blade",
+          "level": 29
+        },
+        {
+          "name": "agility",
+          "level": 35
+        },
+        {
+          "name": "slam",
+          "level": 41
+        },
+        {
+          "name": "detect",
+          "level": 47
+        },
+        {
+          "name": "false-swipe",
+          "level": 53
+        }
+      ],
+      "generation": "generation-iii",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/130/",
+      "_complete": true
+    },
+    "sceptile": {
+      "id": 254,
+      "types": [
+        "grass"
+      ],
+      "stats": {
+        "hp": 70,
+        "attack": 85,
+        "defense": 65,
+        "special-attack": 105,
+        "special-defense": 85,
+        "speed": 120
+      },
+      "abilities": [
+        {
+          "name": "overgrow",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "unburden",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "absorb",
+          "level": 1
+        },
+        {
+          "name": "leer",
+          "level": 1
+        },
+        {
+          "name": "pound",
+          "level": 1
+        },
+        {
+          "name": "quick-attack",
+          "level": 1
+        },
+        {
+          "name": "absorb",
+          "level": 6
+        },
+        {
+          "name": "quick-attack",
+          "level": 11
+        },
+        {
+          "name": "fury-cutter",
+          "level": 16
+        },
+        {
+          "name": "pursuit",
+          "level": 17
+        },
+        {
+          "name": "screech",
+          "level": 23
+        },
+        {
+          "name": "leaf-blade",
+          "level": 29
+        },
+        {
+          "name": "agility",
+          "level": 35
+        },
+        {
+          "name": "slam",
+          "level": 43
+        },
+        {
+          "name": "detect",
+          "level": 51
+        },
+        {
+          "name": "false-swipe",
+          "level": 59
+        }
+      ],
+      "generation": "generation-iii",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/130/",
+      "_complete": true
+    },
+    "torchic": {
+      "id": 255,
+      "types": [
+        "fire"
+      ],
+      "stats": {
+        "hp": 45,
+        "attack": 60,
+        "defense": 40,
+        "special-attack": 70,
+        "special-defense": 50,
+        "speed": 45
+      },
+      "abilities": [
+        {
+          "name": "blaze",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "speed-boost",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "growl",
+          "level": 1
+        },
+        {
+          "name": "scratch",
+          "level": 1
+        },
+        {
+          "name": "focus-energy",
+          "level": 7
+        },
+        {
+          "name": "ember",
+          "level": 10
+        },
+        {
+          "name": "peck",
+          "level": 16
+        },
+        {
+          "name": "sand-attack",
+          "level": 19
+        },
+        {
+          "name": "fire-spin",
+          "level": 25
+        },
+        {
+          "name": "quick-attack",
+          "level": 28
+        },
+        {
+          "name": "slash",
+          "level": 34
+        },
+        {
+          "name": "mirror-move",
+          "level": 37
+        },
+        {
+          "name": "flamethrower",
+          "level": 43
+        }
+      ],
+      "generation": "generation-iii",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/131/",
+      "_complete": true
+    },
+    "combusken": {
+      "id": 256,
+      "types": [
+        "fire",
+        "fighting"
+      ],
+      "stats": {
+        "hp": 60,
+        "attack": 85,
+        "defense": 60,
+        "special-attack": 85,
+        "special-defense": 60,
+        "speed": 55
+      },
+      "abilities": [
+        {
+          "name": "blaze",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "speed-boost",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "ember",
+          "level": 1
+        },
+        {
+          "name": "focus-energy",
+          "level": 1
+        },
+        {
+          "name": "growl",
+          "level": 1
+        },
+        {
+          "name": "scratch",
+          "level": 1
+        },
+        {
+          "name": "focus-energy",
+          "level": 7
+        },
+        {
+          "name": "ember",
+          "level": 13
+        },
+        {
+          "name": "double-kick",
+          "level": 16
+        },
+        {
+          "name": "peck",
+          "level": 17
+        },
+        {
+          "name": "sand-attack",
+          "level": 21
+        },
+        {
+          "name": "bulk-up",
+          "level": 28
+        },
+        {
+          "name": "quick-attack",
+          "level": 32
+        },
+        {
+          "name": "slash",
+          "level": 39
+        },
+        {
+          "name": "mirror-move",
+          "level": 43
+        },
+        {
+          "name": "sky-uppercut",
+          "level": 50
+        }
+      ],
+      "generation": "generation-iii",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/131/",
+      "_complete": true
+    },
+    "blaziken": {
+      "id": 257,
+      "types": [
+        "fire",
+        "fighting"
+      ],
+      "stats": {
+        "hp": 80,
+        "attack": 120,
+        "defense": 70,
+        "special-attack": 110,
+        "special-defense": 70,
+        "speed": 80
+      },
+      "abilities": [
+        {
+          "name": "blaze",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "speed-boost",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "ember",
+          "level": 1
+        },
+        {
+          "name": "fire-punch",
+          "level": 1
+        },
+        {
+          "name": "focus-energy",
+          "level": 1
+        },
+        {
+          "name": "growl",
+          "level": 1
+        },
+        {
+          "name": "scratch",
+          "level": 1
+        },
+        {
+          "name": "focus-energy",
+          "level": 7
+        },
+        {
+          "name": "ember",
+          "level": 13
+        },
+        {
+          "name": "double-kick",
+          "level": 16
+        },
+        {
+          "name": "peck",
+          "level": 17
+        },
+        {
+          "name": "sand-attack",
+          "level": 21
+        },
+        {
+          "name": "bulk-up",
+          "level": 28
+        },
+        {
+          "name": "quick-attack",
+          "level": 32
+        },
+        {
+          "name": "blaze-kick",
+          "level": 36
+        },
+        {
+          "name": "slash",
+          "level": 42
+        },
+        {
+          "name": "mirror-move",
+          "level": 49
+        },
+        {
+          "name": "sky-uppercut",
+          "level": 59
+        }
+      ],
+      "generation": "generation-iii",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/131/",
+      "_complete": true
+    },
+    "mudkip": {
+      "id": 258,
+      "types": [
+        "water"
+      ],
+      "stats": {
+        "hp": 50,
+        "attack": 70,
+        "defense": 50,
+        "special-attack": 50,
+        "special-defense": 50,
+        "speed": 40
+      },
+      "abilities": [
+        {
+          "name": "torrent",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "damp",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "growl",
+          "level": 1
+        },
+        {
+          "name": "tackle",
+          "level": 1
+        },
+        {
+          "name": "mud-slap",
+          "level": 6
+        },
+        {
+          "name": "water-gun",
+          "level": 10
+        },
+        {
+          "name": "bide",
+          "level": 15
+        },
+        {
+          "name": "foresight",
+          "level": 19
+        },
+        {
+          "name": "mud-sport",
+          "level": 24
+        },
+        {
+          "name": "take-down",
+          "level": 28
+        },
+        {
+          "name": "whirlpool",
+          "level": 33
+        },
+        {
+          "name": "protect",
+          "level": 37
+        },
+        {
+          "name": "hydro-pump",
+          "level": 42
+        },
+        {
+          "name": "endeavor",
+          "level": 46
+        }
+      ],
+      "generation": "generation-iii",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/132/",
+      "_complete": true
+    },
+    "marshtomp": {
+      "id": 259,
+      "types": [
+        "water",
+        "ground"
+      ],
+      "stats": {
+        "hp": 70,
+        "attack": 85,
+        "defense": 70,
+        "special-attack": 60,
+        "special-defense": 70,
+        "speed": 50
+      },
+      "abilities": [
+        {
+          "name": "torrent",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "damp",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "growl",
+          "level": 1
+        },
+        {
+          "name": "mud-slap",
+          "level": 1
+        },
+        {
+          "name": "tackle",
+          "level": 1
+        },
+        {
+          "name": "water-gun",
+          "level": 1
+        },
+        {
+          "name": "mud-slap",
+          "level": 6
+        },
+        {
+          "name": "water-gun",
+          "level": 10
+        },
+        {
+          "name": "bide",
+          "level": 15
+        },
+        {
+          "name": "mud-shot",
+          "level": 16
+        },
+        {
+          "name": "foresight",
+          "level": 20
+        },
+        {
+          "name": "mud-sport",
+          "level": 25
+        },
+        {
+          "name": "take-down",
+          "level": 31
+        },
+        {
+          "name": "muddy-water",
+          "level": 37
+        },
+        {
+          "name": "protect",
+          "level": 42
+        },
+        {
+          "name": "earthquake",
+          "level": 46
+        },
+        {
+          "name": "endeavor",
+          "level": 53
+        }
+      ],
+      "generation": "generation-iii",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/132/",
+      "_complete": true
+    },
+    "swampert": {
+      "id": 260,
+      "types": [
+        "water",
+        "ground"
+      ],
+      "stats": {
+        "hp": 100,
+        "attack": 110,
+        "defense": 90,
+        "special-attack": 85,
+        "special-defense": 90,
+        "speed": 60
+      },
+      "abilities": [
+        {
+          "name": "torrent",
+          "is_hidden": false,
+          "slot": 1
+        },
+        {
+          "name": "damp",
+          "is_hidden": true,
+          "slot": 3
+        }
+      ],
+      "level_up_moves": [
+        {
+          "name": "growl",
+          "level": 1
+        },
+        {
+          "name": "mud-slap",
+          "level": 1
+        },
+        {
+          "name": "tackle",
+          "level": 1
+        },
+        {
+          "name": "water-gun",
+          "level": 1
+        },
+        {
+          "name": "mud-slap",
+          "level": 6
+        },
+        {
+          "name": "water-gun",
+          "level": 10
+        },
+        {
+          "name": "bide",
+          "level": 15
+        },
+        {
+          "name": "mud-shot",
+          "level": 16
+        },
+        {
+          "name": "foresight",
+          "level": 20
+        },
+        {
+          "name": "mud-sport",
+          "level": 25
+        },
+        {
+          "name": "take-down",
+          "level": 31
+        },
+        {
+          "name": "muddy-water",
+          "level": 39
+        },
+        {
+          "name": "protect",
+          "level": 46
+        },
+        {
+          "name": "earthquake",
+          "level": 52
+        },
+        {
+          "name": "endeavor",
+          "level": 61
+        }
+      ],
+      "generation": "generation-iii",
+      "evo_chain_url": "https://pokeapi.co/api/v2/evolution-chain/132/",
+      "_complete": true
+    }
+  },
+  "moves": {
+    "growl": {
+      "power": null,
+      "accuracy": 100,
+      "pp": 40,
+      "type": "normal",
+      "damage_class": "status"
+    },
+    "growth": {
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "type": "normal",
+      "damage_class": "status"
+    },
+    "leech-seed": {
+      "power": null,
+      "accuracy": 90,
+      "pp": 10,
+      "type": "grass",
+      "damage_class": "status"
+    },
+    "poison-powder": {
+      "power": null,
+      "accuracy": 75,
+      "pp": 35,
+      "type": "poison",
+      "damage_class": "status"
+    },
+    "razor-leaf": {
+      "power": 55,
+      "accuracy": 95,
+      "pp": 25,
+      "type": "grass",
+      "damage_class": "physical"
+    },
+    "sleep-powder": {
+      "power": null,
+      "accuracy": 75,
+      "pp": 15,
+      "type": "grass",
+      "damage_class": "status"
+    },
+    "solar-beam": {
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "type": "grass",
+      "damage_class": "special"
+    },
+    "sweet-scent": {
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "type": "normal",
+      "damage_class": "status"
+    },
+    "synthesis": {
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "type": "grass",
+      "damage_class": "status"
+    },
+    "tackle": {
+      "power": 40,
+      "accuracy": 100,
+      "pp": 35,
+      "type": "normal",
+      "damage_class": "physical"
+    },
+    "vine-whip": {
+      "power": 45,
+      "accuracy": 100,
+      "pp": 25,
+      "type": "grass",
+      "damage_class": "physical"
+    },
+    "absorb": {
+      "power": 20,
+      "accuracy": 100,
+      "pp": 25,
+      "type": "grass",
+      "damage_class": "special"
+    },
+    "agility": {
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "type": "psychic",
+      "damage_class": "status"
+    },
+    "bide": {
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "type": "normal",
+      "damage_class": "physical"
+    },
+    "bite": {
+      "power": 60,
+      "accuracy": 100,
+      "pp": 25,
+      "type": "dark",
+      "damage_class": "physical"
+    },
+    "blaze-kick": {
+      "power": 85,
+      "accuracy": 90,
+      "pp": 10,
+      "type": "fire",
+      "damage_class": "physical"
+    },
+    "body-slam": {
+      "power": 85,
+      "accuracy": 100,
+      "pp": 15,
+      "type": "normal",
+      "damage_class": "physical"
+    },
+    "bubble": {
+      "power": 40,
+      "accuracy": 100,
+      "pp": 30,
+      "type": "water",
+      "damage_class": "special"
+    },
+    "bulk-up": {
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "type": "fighting",
+      "damage_class": "status"
+    },
+    "detect": {
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "type": "fighting",
+      "damage_class": "status"
+    },
+    "double-kick": {
+      "power": 30,
+      "accuracy": 100,
+      "pp": 30,
+      "type": "fighting",
+      "damage_class": "physical"
+    },
+    "dragon-rage": {
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "type": "dragon",
+      "damage_class": "special"
+    },
+    "earthquake": {
+      "power": 100,
+      "accuracy": 100,
+      "pp": 10,
+      "type": "ground",
+      "damage_class": "physical"
+    },
+    "ember": {
+      "power": 40,
+      "accuracy": 100,
+      "pp": 25,
+      "type": "fire",
+      "damage_class": "special"
+    },
+    "endeavor": {
+      "power": null,
+      "accuracy": 100,
+      "pp": 5,
+      "type": "normal",
+      "damage_class": "physical"
+    },
+    "false-swipe": {
+      "power": 40,
+      "accuracy": 100,
+      "pp": 40,
+      "type": "normal",
+      "damage_class": "physical"
+    },
+    "fire-punch": {
+      "power": 75,
+      "accuracy": 100,
+      "pp": 15,
+      "type": "fire",
+      "damage_class": "physical"
+    },
+    "fire-spin": {
+      "power": 35,
+      "accuracy": 85,
+      "pp": 15,
+      "type": "fire",
+      "damage_class": "special"
+    },
+    "flame-wheel": {
+      "power": 60,
+      "accuracy": 100,
+      "pp": 25,
+      "type": "fire",
+      "damage_class": "physical"
+    },
+    "flamethrower": {
+      "power": 90,
+      "accuracy": 100,
+      "pp": 15,
+      "type": "fire",
+      "damage_class": "special"
+    },
+    "focus-energy": {
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "type": "normal",
+      "damage_class": "status"
+    },
+    "foresight": {
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "type": "normal",
+      "damage_class": "status"
+    },
+    "fury-cutter": {
+      "power": 40,
+      "accuracy": 95,
+      "pp": 20,
+      "type": "bug",
+      "damage_class": "physical"
+    },
+    "giga-drain": {
+      "power": 75,
+      "accuracy": 100,
+      "pp": 10,
+      "type": "grass",
+      "damage_class": "special"
+    },
+    "hydro-pump": {
+      "power": 110,
+      "accuracy": 80,
+      "pp": 5,
+      "type": "water",
+      "damage_class": "special"
+    },
+    "leaf-blade": {
+      "power": 90,
+      "accuracy": 100,
+      "pp": 15,
+      "type": "grass",
+      "damage_class": "physical"
+    },
+    "leer": {
+      "power": null,
+      "accuracy": 100,
+      "pp": 30,
+      "type": "normal",
+      "damage_class": "status"
+    },
+    "light-screen": {
+      "power": null,
+      "accuracy": null,
+      "pp": 30,
+      "type": "psychic",
+      "damage_class": "status"
+    },
+    "mega-drain": {
+      "power": 40,
+      "accuracy": 100,
+      "pp": 15,
+      "type": "grass",
+      "damage_class": "special"
+    },
+    "mirror-move": {
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "type": "flying",
+      "damage_class": "status"
+    },
+    "mud-shot": {
+      "power": 55,
+      "accuracy": 95,
+      "pp": 15,
+      "type": "ground",
+      "damage_class": "special"
+    },
+    "mud-slap": {
+      "power": 20,
+      "accuracy": 100,
+      "pp": 10,
+      "type": "ground",
+      "damage_class": "special"
+    },
+    "mud-sport": {
+      "power": null,
+      "accuracy": null,
+      "pp": 15,
+      "type": "ground",
+      "damage_class": "status"
+    },
+    "muddy-water": {
+      "power": 90,
+      "accuracy": 85,
+      "pp": 10,
+      "type": "water",
+      "damage_class": "special"
+    },
+    "peck": {
+      "power": 35,
+      "accuracy": 100,
+      "pp": 35,
+      "type": "flying",
+      "damage_class": "physical"
+    },
+    "pound": {
+      "power": 40,
+      "accuracy": 100,
+      "pp": 35,
+      "type": "normal",
+      "damage_class": "physical"
+    },
+    "protect": {
+      "power": null,
+      "accuracy": null,
+      "pp": 10,
+      "type": "normal",
+      "damage_class": "status"
+    },
+    "pursuit": {
+      "power": 40,
+      "accuracy": 100,
+      "pp": 20,
+      "type": "dark",
+      "damage_class": "physical"
+    },
+    "quick-attack": {
+      "power": 40,
+      "accuracy": 100,
+      "pp": 30,
+      "type": "normal",
+      "damage_class": "physical"
+    },
+    "rage": {
+      "power": 20,
+      "accuracy": 100,
+      "pp": 20,
+      "type": "normal",
+      "damage_class": "physical"
+    },
+    "rain-dance": {
+      "power": null,
+      "accuracy": null,
+      "pp": 5,
+      "type": "water",
+      "damage_class": "status"
+    },
+    "rapid-spin": {
+      "power": 50,
+      "accuracy": 100,
+      "pp": 40,
+      "type": "normal",
+      "damage_class": "physical"
+    },
+    "reflect": {
+      "power": null,
+      "accuracy": null,
+      "pp": 20,
+      "type": "psychic",
+      "damage_class": "status"
+    },
+    "safeguard": {
+      "power": null,
+      "accuracy": null,
+      "pp": 25,
+      "type": "normal",
+      "damage_class": "status"
+    },
+    "sand-attack": {
+      "power": null,
+      "accuracy": 100,
+      "pp": 15,
+      "type": "ground",
+      "damage_class": "status"
+    },
+    "scary-face": {
+      "power": null,
+      "accuracy": 100,
+      "pp": 10,
+      "type": "normal",
+      "damage_class": "status"
+    },
+    "scratch": {
+      "power": 40,
+      "accuracy": 100,
+      "pp": 35,
+      "type": "normal",
+      "damage_class": "physical"
+    },
+    "screech": {
+      "power": null,
+      "accuracy": 85,
+      "pp": 40,
+      "type": "normal",
+      "damage_class": "status"
+    },
+    "skull-bash": {
+      "power": 130,
+      "accuracy": 100,
+      "pp": 10,
+      "type": "normal",
+      "damage_class": "physical"
+    },
+    "sky-uppercut": {
+      "power": 85,
+      "accuracy": 90,
+      "pp": 15,
+      "type": "fighting",
+      "damage_class": "physical"
+    },
+    "slam": {
+      "power": 80,
+      "accuracy": 75,
+      "pp": 20,
+      "type": "normal",
+      "damage_class": "physical"
+    },
+    "slash": {
+      "power": 70,
+      "accuracy": 100,
+      "pp": 20,
+      "type": "normal",
+      "damage_class": "physical"
+    },
+    "smokescreen": {
+      "power": null,
+      "accuracy": 100,
+      "pp": 20,
+      "type": "normal",
+      "damage_class": "status"
+    },
+    "swift": {
+      "power": 60,
+      "accuracy": null,
+      "pp": 20,
+      "type": "normal",
+      "damage_class": "special"
+    },
+    "tail-whip": {
+      "power": null,
+      "accuracy": 100,
+      "pp": 30,
+      "type": "normal",
+      "damage_class": "status"
+    },
+    "take-down": {
+      "power": 90,
+      "accuracy": 85,
+      "pp": 20,
+      "type": "normal",
+      "damage_class": "physical"
+    },
+    "water-gun": {
+      "power": 40,
+      "accuracy": 100,
+      "pp": 25,
+      "type": "water",
+      "damage_class": "special"
+    },
+    "whirlpool": {
+      "power": 35,
+      "accuracy": 85,
+      "pp": 15,
+      "type": "water",
+      "damage_class": "special"
+    },
+    "wing-attack": {
+      "power": 60,
+      "accuracy": 100,
+      "pp": 35,
+      "type": "flying",
+      "damage_class": "physical"
+    },
+    "withdraw": {
+      "power": null,
+      "accuracy": null,
+      "pp": 40,
+      "type": "water",
+      "damage_class": "status"
+    }
+  },
+  "abilities": {
+    "chlorophyll": {
+      "effect": "Doubles Speed during strong sunlight."
+    },
+    "overgrow": {
+      "effect": "Strengthens grass moves to inflict 1.5\u00d7 damage at 1/3 max HP or less."
+    },
+    "blaze": {
+      "effect": "Strengthens fire moves to inflict 1.5\u00d7 damage at 1/3 max HP or less."
+    },
+    "damp": {
+      "effect": "Prevents self destruct, explosion, and aftermath from working while the Pok\u00e9mon is in battle."
+    },
+    "flash-fire": {
+      "effect": "Protects against fire moves.  Once one has been blocked, the Pok\u00e9mon's own Fire moves inflict 1.5\u00d7 damage until it leaves battle."
+    },
+    "leaf-guard": {
+      "effect": "Protects against major status ailments during strong sunlight."
+    },
+    "rain-dish": {
+      "effect": "Heals for 1/16 max HP after each turn during rain."
+    },
+    "sheer-force": {
+      "effect": "Strengthens moves with extra effects to 1.3\u00d7 their power, but prevents their extra effects."
+    },
+    "solar-power": {
+      "effect": "Increases Special Attack to 1.5\u00d7 but costs 1/8 max HP after each turn during strong sunlight."
+    },
+    "speed-boost": {
+      "effect": "Raises Speed one stage after each turn."
+    },
+    "torrent": {
+      "effect": "Strengthens water moves to inflict 1.5\u00d7 damage at 1/3 max HP or less."
+    },
+    "unburden": {
+      "effect": "Doubles Speed upon using or losing a held item."
+    }
+  },
+  "evolution_chains": {
+    "https://pokeapi.co/api/v2/evolution-chain/1/": [
+      {
+        "species": "bulbasaur",
+        "stage": 0,
+        "trigger": null
+      },
+      {
+        "species": "ivysaur",
+        "stage": 1,
+        "trigger": {
+          "trigger": "level-up",
+          "min_level": 16,
+          "item": null,
+          "min_happiness": null,
+          "held_item": null,
+          "time_of_day": null
+        }
+      },
+      {
+        "species": "venusaur",
+        "stage": 2,
+        "trigger": {
+          "trigger": "level-up",
+          "min_level": 32,
+          "item": null,
+          "min_happiness": null,
+          "held_item": null,
+          "time_of_day": null
+        }
+      }
+    ],
+    "https://pokeapi.co/api/v2/evolution-chain/2/": [
+      {
+        "species": "charmander",
+        "stage": 0,
+        "trigger": null
+      },
+      {
+        "species": "charmeleon",
+        "stage": 1,
+        "trigger": {
+          "trigger": "level-up",
+          "min_level": 16,
+          "item": null,
+          "min_happiness": null,
+          "held_item": null,
+          "time_of_day": null
+        }
+      },
+      {
+        "species": "charizard",
+        "stage": 2,
+        "trigger": {
+          "trigger": "level-up",
+          "min_level": 36,
+          "item": null,
+          "min_happiness": null,
+          "held_item": null,
+          "time_of_day": null
+        }
+      }
+    ],
+    "https://pokeapi.co/api/v2/evolution-chain/3/": [
+      {
+        "species": "squirtle",
+        "stage": 0,
+        "trigger": null
+      },
+      {
+        "species": "wartortle",
+        "stage": 1,
+        "trigger": {
+          "trigger": "level-up",
+          "min_level": 16,
+          "item": null,
+          "min_happiness": null,
+          "held_item": null,
+          "time_of_day": null
+        }
+      },
+      {
+        "species": "blastoise",
+        "stage": 2,
+        "trigger": {
+          "trigger": "level-up",
+          "min_level": 36,
+          "item": null,
+          "min_happiness": null,
+          "held_item": null,
+          "time_of_day": null
+        }
+      }
+    ],
+    "https://pokeapi.co/api/v2/evolution-chain/79/": [
+      {
+        "species": "chikorita",
+        "stage": 0,
+        "trigger": null
+      },
+      {
+        "species": "bayleef",
+        "stage": 1,
+        "trigger": {
+          "trigger": "level-up",
+          "min_level": 16,
+          "item": null,
+          "min_happiness": null,
+          "held_item": null,
+          "time_of_day": null
+        }
+      },
+      {
+        "species": "meganium",
+        "stage": 2,
+        "trigger": {
+          "trigger": "level-up",
+          "min_level": 32,
+          "item": null,
+          "min_happiness": null,
+          "held_item": null,
+          "time_of_day": null
+        }
+      }
+    ],
+    "https://pokeapi.co/api/v2/evolution-chain/80/": [
+      {
+        "species": "cyndaquil",
+        "stage": 0,
+        "trigger": null
+      },
+      {
+        "species": "quilava",
+        "stage": 1,
+        "trigger": {
+          "trigger": "level-up",
+          "min_level": 14,
+          "item": null,
+          "min_happiness": null,
+          "held_item": null,
+          "time_of_day": null
+        }
+      },
+      {
+        "species": "typhlosion",
+        "stage": 2,
+        "trigger": {
+          "trigger": "level-up",
+          "min_level": 36,
+          "item": null,
+          "min_happiness": null,
+          "held_item": null,
+          "time_of_day": null
+        }
+      }
+    ],
+    "https://pokeapi.co/api/v2/evolution-chain/81/": [
+      {
+        "species": "totodile",
+        "stage": 0,
+        "trigger": null
+      },
+      {
+        "species": "croconaw",
+        "stage": 1,
+        "trigger": {
+          "trigger": "level-up",
+          "min_level": 18,
+          "item": null,
+          "min_happiness": null,
+          "held_item": null,
+          "time_of_day": null
+        }
+      },
+      {
+        "species": "feraligatr",
+        "stage": 2,
+        "trigger": {
+          "trigger": "level-up",
+          "min_level": 30,
+          "item": null,
+          "min_happiness": null,
+          "held_item": null,
+          "time_of_day": null
+        }
+      }
+    ],
+    "https://pokeapi.co/api/v2/evolution-chain/130/": [
+      {
+        "species": "treecko",
+        "stage": 0,
+        "trigger": null
+      },
+      {
+        "species": "grovyle",
+        "stage": 1,
+        "trigger": {
+          "trigger": "level-up",
+          "min_level": 16,
+          "item": null,
+          "min_happiness": null,
+          "held_item": null,
+          "time_of_day": null
+        }
+      },
+      {
+        "species": "sceptile",
+        "stage": 2,
+        "trigger": {
+          "trigger": "level-up",
+          "min_level": 36,
+          "item": null,
+          "min_happiness": null,
+          "held_item": null,
+          "time_of_day": null
+        }
+      }
+    ],
+    "https://pokeapi.co/api/v2/evolution-chain/131/": [
+      {
+        "species": "torchic",
+        "stage": 0,
+        "trigger": null
+      },
+      {
+        "species": "combusken",
+        "stage": 1,
+        "trigger": {
+          "trigger": "level-up",
+          "min_level": 16,
+          "item": null,
+          "min_happiness": null,
+          "held_item": null,
+          "time_of_day": null
+        }
+      },
+      {
+        "species": "blaziken",
+        "stage": 2,
+        "trigger": {
+          "trigger": "level-up",
+          "min_level": 36,
+          "item": null,
+          "min_happiness": null,
+          "held_item": null,
+          "time_of_day": null
+        }
+      }
+    ],
+    "https://pokeapi.co/api/v2/evolution-chain/132/": [
+      {
+        "species": "mudkip",
+        "stage": 0,
+        "trigger": null
+      },
+      {
+        "species": "marshtomp",
+        "stage": 1,
+        "trigger": {
+          "trigger": "level-up",
+          "min_level": 16,
+          "item": null,
+          "min_happiness": null,
+          "held_item": null,
+          "time_of_day": null
+        }
+      },
+      {
+        "species": "swampert",
+        "stage": 2,
+        "trigger": {
+          "trigger": "level-up",
+          "min_level": 36,
+          "item": null,
+          "min_happiness": null,
+          "held_item": null,
+          "time_of_day": null
+        }
+      }
+    ]
+  },
+  "meta": {
+    "api_calls": 135,
+    "last_call_url": "https://pokeapi.co/api/v2/ability/unburden",
+    "history": [
+      {
+        "label": "evo-chain",
+        "url": "https://pokeapi.co/api/v2/evolution-chain/1/"
+      },
+      {
+        "label": "move/growl",
+        "url": "https://pokeapi.co/api/v2/move/growl"
+      },
+      {
+        "label": "move/growth",
+        "url": "https://pokeapi.co/api/v2/move/growth"
+      },
+      {
+        "label": "move/leech-seed",
+        "url": "https://pokeapi.co/api/v2/move/leech-seed"
+      },
+      {
+        "label": "move/poison-powder",
+        "url": "https://pokeapi.co/api/v2/move/poison-powder"
+      },
+      {
+        "label": "move/razor-leaf",
+        "url": "https://pokeapi.co/api/v2/move/razor-leaf"
+      },
+      {
+        "label": "move/sleep-powder",
+        "url": "https://pokeapi.co/api/v2/move/sleep-powder"
+      },
+      {
+        "label": "move/solar-beam",
+        "url": "https://pokeapi.co/api/v2/move/solar-beam"
+      },
+      {
+        "label": "move/sweet-scent",
+        "url": "https://pokeapi.co/api/v2/move/sweet-scent"
+      },
+      {
+        "label": "move/synthesis",
+        "url": "https://pokeapi.co/api/v2/move/synthesis"
+      },
+      {
+        "label": "move/tackle",
+        "url": "https://pokeapi.co/api/v2/move/tackle"
+      },
+      {
+        "label": "move/vine-whip",
+        "url": "https://pokeapi.co/api/v2/move/vine-whip"
+      },
+      {
+        "label": "ability/chlorophyll",
+        "url": "https://pokeapi.co/api/v2/ability/chlorophyll"
+      },
+      {
+        "label": "ability/overgrow",
+        "url": "https://pokeapi.co/api/v2/ability/overgrow"
+      },
+      {
+        "label": "pokemon/charizard",
+        "url": "https://pokeapi.co/api/v2/pokemon/charizard"
+      },
+      {
+        "label": "species/charizard",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/charizard"
+      },
+      {
+        "label": "pokemon/squirtle",
+        "url": "https://pokeapi.co/api/v2/pokemon/squirtle"
+      },
+      {
+        "label": "species/squirtle",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/squirtle"
+      },
+      {
+        "label": "pokemon/wartortle",
+        "url": "https://pokeapi.co/api/v2/pokemon/wartortle"
+      },
+      {
+        "label": "species/wartortle",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/wartortle"
+      },
+      {
+        "label": "pokemon/blastoise",
+        "url": "https://pokeapi.co/api/v2/pokemon/blastoise"
+      },
+      {
+        "label": "species/blastoise",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/blastoise"
+      },
+      {
+        "label": "pokemon/chikorita",
+        "url": "https://pokeapi.co/api/v2/pokemon/chikorita"
+      },
+      {
+        "label": "species/chikorita",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/chikorita"
+      },
+      {
+        "label": "pokemon/bayleef",
+        "url": "https://pokeapi.co/api/v2/pokemon/bayleef"
+      },
+      {
+        "label": "species/bayleef",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/bayleef"
+      },
+      {
+        "label": "pokemon/meganium",
+        "url": "https://pokeapi.co/api/v2/pokemon/meganium"
+      },
+      {
+        "label": "species/meganium",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/meganium"
+      },
+      {
+        "label": "pokemon/cyndaquil",
+        "url": "https://pokeapi.co/api/v2/pokemon/cyndaquil"
+      },
+      {
+        "label": "species/cyndaquil",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/cyndaquil"
+      },
+      {
+        "label": "pokemon/quilava",
+        "url": "https://pokeapi.co/api/v2/pokemon/quilava"
+      },
+      {
+        "label": "species/quilava",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/quilava"
+      },
+      {
+        "label": "pokemon/typhlosion",
+        "url": "https://pokeapi.co/api/v2/pokemon/typhlosion"
+      },
+      {
+        "label": "species/typhlosion",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/typhlosion"
+      },
+      {
+        "label": "pokemon/totodile",
+        "url": "https://pokeapi.co/api/v2/pokemon/totodile"
+      },
+      {
+        "label": "species/totodile",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/totodile"
+      },
+      {
+        "label": "pokemon/croconaw",
+        "url": "https://pokeapi.co/api/v2/pokemon/croconaw"
+      },
+      {
+        "label": "species/croconaw",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/croconaw"
+      },
+      {
+        "label": "pokemon/feraligatr",
+        "url": "https://pokeapi.co/api/v2/pokemon/feraligatr"
+      },
+      {
+        "label": "species/feraligatr",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/feraligatr"
+      },
+      {
+        "label": "pokemon/treecko",
+        "url": "https://pokeapi.co/api/v2/pokemon/treecko"
+      },
+      {
+        "label": "species/treecko",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/treecko"
+      },
+      {
+        "label": "pokemon/grovyle",
+        "url": "https://pokeapi.co/api/v2/pokemon/grovyle"
+      },
+      {
+        "label": "species/grovyle",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/grovyle"
+      },
+      {
+        "label": "pokemon/sceptile",
+        "url": "https://pokeapi.co/api/v2/pokemon/sceptile"
+      },
+      {
+        "label": "species/sceptile",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/sceptile"
+      },
+      {
+        "label": "pokemon/torchic",
+        "url": "https://pokeapi.co/api/v2/pokemon/torchic"
+      },
+      {
+        "label": "species/torchic",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/torchic"
+      },
+      {
+        "label": "pokemon/combusken",
+        "url": "https://pokeapi.co/api/v2/pokemon/combusken"
+      },
+      {
+        "label": "species/combusken",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/combusken"
+      },
+      {
+        "label": "pokemon/blaziken",
+        "url": "https://pokeapi.co/api/v2/pokemon/blaziken"
+      },
+      {
+        "label": "species/blaziken",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/blaziken"
+      },
+      {
+        "label": "pokemon/mudkip",
+        "url": "https://pokeapi.co/api/v2/pokemon/mudkip"
+      },
+      {
+        "label": "species/mudkip",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/mudkip"
+      },
+      {
+        "label": "pokemon/marshtomp",
+        "url": "https://pokeapi.co/api/v2/pokemon/marshtomp"
+      },
+      {
+        "label": "species/marshtomp",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/marshtomp"
+      },
+      {
+        "label": "pokemon/swampert",
+        "url": "https://pokeapi.co/api/v2/pokemon/swampert"
+      },
+      {
+        "label": "species/swampert",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/swampert"
+      },
+      {
+        "label": "evo-chain",
+        "url": "https://pokeapi.co/api/v2/evolution-chain/2/"
+      },
+      {
+        "label": "evo-chain",
+        "url": "https://pokeapi.co/api/v2/evolution-chain/3/"
+      },
+      {
+        "label": "evo-chain",
+        "url": "https://pokeapi.co/api/v2/evolution-chain/79/"
+      },
+      {
+        "label": "evo-chain",
+        "url": "https://pokeapi.co/api/v2/evolution-chain/80/"
+      },
+      {
+        "label": "evo-chain",
+        "url": "https://pokeapi.co/api/v2/evolution-chain/81/"
+      },
+      {
+        "label": "evo-chain",
+        "url": "https://pokeapi.co/api/v2/evolution-chain/130/"
+      },
+      {
+        "label": "evo-chain",
+        "url": "https://pokeapi.co/api/v2/evolution-chain/131/"
+      },
+      {
+        "label": "evo-chain",
+        "url": "https://pokeapi.co/api/v2/evolution-chain/132/"
+      },
+      {
+        "label": "move/absorb",
+        "url": "https://pokeapi.co/api/v2/move/absorb"
+      },
+      {
+        "label": "move/agility",
+        "url": "https://pokeapi.co/api/v2/move/agility"
+      },
+      {
+        "label": "move/bide",
+        "url": "https://pokeapi.co/api/v2/move/bide"
+      },
+      {
+        "label": "move/bite",
+        "url": "https://pokeapi.co/api/v2/move/bite"
+      },
+      {
+        "label": "move/blaze-kick",
+        "url": "https://pokeapi.co/api/v2/move/blaze-kick"
+      },
+      {
+        "label": "move/body-slam",
+        "url": "https://pokeapi.co/api/v2/move/body-slam"
+      },
+      {
+        "label": "move/bubble",
+        "url": "https://pokeapi.co/api/v2/move/bubble"
+      },
+      {
+        "label": "move/bulk-up",
+        "url": "https://pokeapi.co/api/v2/move/bulk-up"
+      },
+      {
+        "label": "move/detect",
+        "url": "https://pokeapi.co/api/v2/move/detect"
+      },
+      {
+        "label": "move/double-kick",
+        "url": "https://pokeapi.co/api/v2/move/double-kick"
+      },
+      {
+        "label": "move/dragon-rage",
+        "url": "https://pokeapi.co/api/v2/move/dragon-rage"
+      },
+      {
+        "label": "move/earthquake",
+        "url": "https://pokeapi.co/api/v2/move/earthquake"
+      },
+      {
+        "label": "move/ember",
+        "url": "https://pokeapi.co/api/v2/move/ember"
+      },
+      {
+        "label": "move/endeavor",
+        "url": "https://pokeapi.co/api/v2/move/endeavor"
+      },
+      {
+        "label": "move/false-swipe",
+        "url": "https://pokeapi.co/api/v2/move/false-swipe"
+      },
+      {
+        "label": "move/fire-punch",
+        "url": "https://pokeapi.co/api/v2/move/fire-punch"
+      },
+      {
+        "label": "move/fire-spin",
+        "url": "https://pokeapi.co/api/v2/move/fire-spin"
+      },
+      {
+        "label": "move/flame-wheel",
+        "url": "https://pokeapi.co/api/v2/move/flame-wheel"
+      },
+      {
+        "label": "move/flamethrower",
+        "url": "https://pokeapi.co/api/v2/move/flamethrower"
+      },
+      {
+        "label": "move/focus-energy",
+        "url": "https://pokeapi.co/api/v2/move/focus-energy"
+      },
+      {
+        "label": "move/foresight",
+        "url": "https://pokeapi.co/api/v2/move/foresight"
+      },
+      {
+        "label": "move/fury-cutter",
+        "url": "https://pokeapi.co/api/v2/move/fury-cutter"
+      },
+      {
+        "label": "move/giga-drain",
+        "url": "https://pokeapi.co/api/v2/move/giga-drain"
+      },
+      {
+        "label": "move/hydro-pump",
+        "url": "https://pokeapi.co/api/v2/move/hydro-pump"
+      },
+      {
+        "label": "move/leaf-blade",
+        "url": "https://pokeapi.co/api/v2/move/leaf-blade"
+      },
+      {
+        "label": "move/leer",
+        "url": "https://pokeapi.co/api/v2/move/leer"
+      },
+      {
+        "label": "move/light-screen",
+        "url": "https://pokeapi.co/api/v2/move/light-screen"
+      },
+      {
+        "label": "move/mega-drain",
+        "url": "https://pokeapi.co/api/v2/move/mega-drain"
+      },
+      {
+        "label": "move/mirror-move",
+        "url": "https://pokeapi.co/api/v2/move/mirror-move"
+      },
+      {
+        "label": "move/mud-shot",
+        "url": "https://pokeapi.co/api/v2/move/mud-shot"
+      },
+      {
+        "label": "move/mud-slap",
+        "url": "https://pokeapi.co/api/v2/move/mud-slap"
+      },
+      {
+        "label": "move/mud-sport",
+        "url": "https://pokeapi.co/api/v2/move/mud-sport"
+      },
+      {
+        "label": "move/muddy-water",
+        "url": "https://pokeapi.co/api/v2/move/muddy-water"
+      },
+      {
+        "label": "move/peck",
+        "url": "https://pokeapi.co/api/v2/move/peck"
+      },
+      {
+        "label": "move/pound",
+        "url": "https://pokeapi.co/api/v2/move/pound"
+      },
+      {
+        "label": "move/protect",
+        "url": "https://pokeapi.co/api/v2/move/protect"
+      },
+      {
+        "label": "move/pursuit",
+        "url": "https://pokeapi.co/api/v2/move/pursuit"
+      },
+      {
+        "label": "move/quick-attack",
+        "url": "https://pokeapi.co/api/v2/move/quick-attack"
+      },
+      {
+        "label": "move/rage",
+        "url": "https://pokeapi.co/api/v2/move/rage"
+      },
+      {
+        "label": "move/rain-dance",
+        "url": "https://pokeapi.co/api/v2/move/rain-dance"
+      },
+      {
+        "label": "move/rapid-spin",
+        "url": "https://pokeapi.co/api/v2/move/rapid-spin"
+      },
+      {
+        "label": "move/reflect",
+        "url": "https://pokeapi.co/api/v2/move/reflect"
+      },
+      {
+        "label": "move/safeguard",
+        "url": "https://pokeapi.co/api/v2/move/safeguard"
+      },
+      {
+        "label": "move/sand-attack",
+        "url": "https://pokeapi.co/api/v2/move/sand-attack"
+      },
+      {
+        "label": "move/scary-face",
+        "url": "https://pokeapi.co/api/v2/move/scary-face"
+      },
+      {
+        "label": "move/scratch",
+        "url": "https://pokeapi.co/api/v2/move/scratch"
+      },
+      {
+        "label": "move/screech",
+        "url": "https://pokeapi.co/api/v2/move/screech"
+      },
+      {
+        "label": "move/skull-bash",
+        "url": "https://pokeapi.co/api/v2/move/skull-bash"
+      },
+      {
+        "label": "move/sky-uppercut",
+        "url": "https://pokeapi.co/api/v2/move/sky-uppercut"
+      },
+      {
+        "label": "move/slam",
+        "url": "https://pokeapi.co/api/v2/move/slam"
+      },
+      {
+        "label": "move/slash",
+        "url": "https://pokeapi.co/api/v2/move/slash"
+      },
+      {
+        "label": "move/smokescreen",
+        "url": "https://pokeapi.co/api/v2/move/smokescreen"
+      },
+      {
+        "label": "move/swift",
+        "url": "https://pokeapi.co/api/v2/move/swift"
+      },
+      {
+        "label": "move/tail-whip",
+        "url": "https://pokeapi.co/api/v2/move/tail-whip"
+      },
+      {
+        "label": "move/take-down",
+        "url": "https://pokeapi.co/api/v2/move/take-down"
+      },
+      {
+        "label": "move/water-gun",
+        "url": "https://pokeapi.co/api/v2/move/water-gun"
+      },
+      {
+        "label": "move/whirlpool",
+        "url": "https://pokeapi.co/api/v2/move/whirlpool"
+      },
+      {
+        "label": "move/wing-attack",
+        "url": "https://pokeapi.co/api/v2/move/wing-attack"
+      },
+      {
+        "label": "move/withdraw",
+        "url": "https://pokeapi.co/api/v2/move/withdraw"
+      },
+      {
+        "label": "ability/blaze",
+        "url": "https://pokeapi.co/api/v2/ability/blaze"
+      },
+      {
+        "label": "ability/damp",
+        "url": "https://pokeapi.co/api/v2/ability/damp"
+      },
+      {
+        "label": "ability/flash-fire",
+        "url": "https://pokeapi.co/api/v2/ability/flash-fire"
+      },
+      {
+        "label": "ability/leaf-guard",
+        "url": "https://pokeapi.co/api/v2/ability/leaf-guard"
+      },
+      {
+        "label": "ability/rain-dish",
+        "url": "https://pokeapi.co/api/v2/ability/rain-dish"
+      },
+      {
+        "label": "ability/sheer-force",
+        "url": "https://pokeapi.co/api/v2/ability/sheer-force"
+      },
+      {
+        "label": "ability/solar-power",
+        "url": "https://pokeapi.co/api/v2/ability/solar-power"
+      },
+      {
+        "label": "ability/speed-boost",
+        "url": "https://pokeapi.co/api/v2/ability/speed-boost"
+      },
+      {
+        "label": "ability/torrent",
+        "url": "https://pokeapi.co/api/v2/ability/torrent"
+      },
+      {
+        "label": "ability/unburden",
+        "url": "https://pokeapi.co/api/v2/ability/unburden"
+      }
+    ]
+  }
+}

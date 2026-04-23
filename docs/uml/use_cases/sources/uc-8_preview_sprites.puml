@@ -1,0 +1,27 @@
+@startuml uc-8_preview_sprites
+!include ../../_theme.iuml
+
+title UC-8 — Preview sprites
+
+|Student|
+start
+:Select a species, instance, or trainer;
+|System|
+if (Species?) then (yes)
+    :`SpriteService.load_for_species(species, shiny=False)`;
+elseif (Instance?) then (yes)
+    :Check `identity.shiny_report().is_shiny`;
+    :`SpriteService.load_for_instance(instance)`;
+else (Trainer)
+    :`SpriteService.load_for_trainer(trainer)`;
+    :Fall back to the trainer's active Pokemon
+    if no portrait is configured;
+endif
+:Read ANSI half-block file from `sprites/regular`
+or `sprites/shiny`;
+:Emit into the `SpritePanel` (preserving colors);
+|Student|
+:View the rendered sprite next to detail text;
+stop
+
+@enduml

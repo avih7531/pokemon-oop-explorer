@@ -1,0 +1,43 @@
+@startuml overview
+!include ../../_theme.iuml
+
+title Pokemon OOP Explorer — Use Case Overview
+
+left to right direction
+
+actor "Student / Reviewer" as Student
+
+rectangle "Pokemon OOP Explorer (TUI)" as System {
+    usecase "UC-1\nBrowse the catalog" as UC1
+    usecase "UC-2\nInspect domain objects" as UC2
+    usecase "UC-3\nView class relationships" as UC3
+    usecase "UC-4\nReview moves & abilities" as UC4
+    usecase "UC-5\nAnalyze stats" as UC5
+    usecase "UC-6\nExplore identity mechanics" as UC6
+    usecase "UC-7\nTrace evolution" as UC7
+    usecase "UC-8\nPreview sprites" as UC8
+}
+
+Student --> UC1
+Student --> UC2
+Student --> UC3
+Student --> UC4
+Student --> UC5
+Student --> UC6
+Student --> UC7
+Student --> UC8
+
+UC2 ..> UC1 : <<extend>>\nrequires selection
+UC3 ..> UC2 : <<include>>
+UC4 ..> UC2 : <<include>>
+UC5 ..> UC2 : <<include>>
+UC6 ..> UC2 : <<include>>
+UC7 ..> UC2 : <<include>>
+UC8 ..> UC2 : <<include>>
+
+note bottom of System
+  Actor is a student or reviewer running the app in a
+  terminal to study the object model and starter-line data.
+end note
+
+@enduml

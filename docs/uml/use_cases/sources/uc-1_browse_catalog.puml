@@ -1,0 +1,25 @@
+@startuml uc-1_browse_catalog
+!include ../../_theme.iuml
+
+title UC-1 — Browse the catalog
+
+|Student|
+start
+:Launch `pokemon-oop-explorer`;
+|System|
+:Load cached PokeAPI data via `DomainRepository`;
+:Build navigation tree
+(Generations / Families / Instances / Trainers);
+:Focus UML tab showing domain overview;
+|Student|
+:Navigate the tree with arrow keys;
+if (Expand generation?) then (yes)
+    :Reveal starter families;
+else (no)
+endif
+:Select family or domain object;
+|System|
+:Highlight selected node;
+stop
+
+@enduml

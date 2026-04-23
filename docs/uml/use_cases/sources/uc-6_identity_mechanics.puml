@@ -1,0 +1,26 @@
+@startuml uc-6_identity_mechanics
+!include ../../_theme.iuml
+
+title UC-6 — Explore identity mechanics
+
+|Student|
+start
+:Select a `PokemonInstance` with a `PokemonIdentity`;
+|System|
+:Build `PokemonIdentity.ShinyComputation`
+(nested value object);
+:Compute `pid_high`, `pid_low`, `shiny_value`;
+:Evaluate `TID xor SID xor PID_high xor PID_low < 8`;
+:Populate the Identity tab;
+|Student|
+:Focus the Identity tab;
+|System|
+if (shiny_value < 8?) then (yes)
+    :Load shiny sprite via `SpriteService`;
+else (no)
+    :Load regular sprite;
+endif
+:Render sprite alongside identity payload;
+stop
+
+@enduml

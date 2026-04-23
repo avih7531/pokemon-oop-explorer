@@ -1,0 +1,132 @@
+$dark-bg: #242933;
+$surface: #434C5E;
+$border: #4C566A;
+$text: #E5E9F0;
+$accent-blue: #5E81AC;
+$cyan: #88C0D0;
+$yellow: #e7c173;
+$green: #97b67c;
+$red: #b74e58;
+$purple: #a97ea1;
+$pink: #e279a1;
+$white: #ffffff;
+
+Screen {
+    background: $dark-bg;
+    color: $text;
+}
+
+Header {
+    background: $pink;
+    color: $white;
+}
+
+Footer {
+    background: $surface;
+    color: $cyan;
+}
+
+#main-layout {
+    height: 1fr;
+}
+
+#top-layout {
+    height: 1fr;
+}
+
+#left-layout {
+    width: 29%;
+    min-width: 30;
+}
+
+#right-layout {
+    width: 37%;
+    min-width: 46;
+}
+
+#center-layout {
+    width: 34%;
+    min-width: 40;
+}
+
+#navigation {
+    height: 2fr;
+    border: heavy $purple;
+    background: $surface;
+    color: $text;
+    padding: 0;
+}
+
+#navigation:focus {
+    border: heavy $accent-blue;
+}
+
+#detail-panel, #sprite-panel, #relationship-panel, #lower-tabs {
+    border: round $border;
+    background: $surface;
+    color: $text;
+    overflow-y: auto;
+}
+
+#detail-panel {
+    height: 2fr;
+    color: $cyan;
+    padding: 0 1;
+}
+
+#sprite-panel {
+    height: 24;
+    overflow-y: hidden;
+    padding: 0 1;
+}
+
+#relationship-panel {
+    height: 1fr;
+    color: $yellow;
+    padding: 0 1;
+    overflow-y: auto;
+    overflow-x: auto;
+    scrollbar-gutter: stable;
+}
+
+#lower-tabs {
+    height: 1fr;
+    margin-top: 0;
+    padding: 0;
+}
+
+TabbedContent > ContentSwitcher {
+    border-top: solid $purple;
+}
+
+Tab {
+    background: $surface;
+    color: $text;
+}
+
+Tab.-active {
+    background: $accent-blue;
+    color: $white;
+}
+
+Static {
+    padding: 0 1;
+}
+
+#tab-moves, #tab-stats, #tab-identity, #tab-evolution, #tab-uml {
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+#detail-panel:focus, #relationship-panel:focus, #tab-moves:focus, #tab-stats:focus, #tab-identity:focus, #tab-evolution:focus, #tab-uml:focus {
+    border: heavy $accent-blue;
+    color: $white;
+}
+
+.error {
+    color: $red;
+}
+
+.success {
+    color: $green;
+}

@@ -1,0 +1,29 @@
+@startuml uc-5_analyze_stats
+!include ../../_theme.iuml
+
+title UC-5 — Analyze stats
+
+|Student|
+start
+:Select a species or instance;
+|System|
+if (Species?) then (yes)
+    :Read base `StatBlock` via `species.base_stats`;
+else (instance)
+    :Call `PokemonInstance.effective_stats()`;
+    :Apply `Nature.modifier_for(stat)` multipliers;
+endif
+:Populate the Stats tab (JSON payload);
+|Student|
+:Focus the Stats tab (`]` or click);
+|System|
+:Render HP / Attack / Defense / Sp.Atk / Sp.Def / Speed;
+|Student|
+if (Inspect stat classes?) then (yes)
+    :Click `StatBlock`, `HPStat`, etc. in relationships;
+    |System|
+    :Focus UML on the clicked stat class;
+endif
+stop
+
+@enduml

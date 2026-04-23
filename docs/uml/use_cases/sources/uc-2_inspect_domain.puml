@@ -1,0 +1,23 @@
+@startuml uc-2_inspect_domain
+!include ../../_theme.iuml
+
+title UC-2 — Inspect domain objects
+
+|Student|
+start
+:Select a species, instance, or trainer in the tree;
+|System|
+:Dispatch `on_tree_node_selected` on the selected `Inspectable`;
+:Call `inspect_payload()` on the object;
+:Render detail panel
+(class chain, ctor signature, fields);
+:Render relationship panel (pulled from `ClassGraph`);
+:Render UML tab focused on the class;
+:Render sprite preview
+(species, instance, or trainer portrait);
+|Student|
+:Read structured detail
+and follow clickable class links;
+stop
+
+@enduml

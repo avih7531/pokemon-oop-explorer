@@ -1,0 +1,26 @@
+[project]
+name = "pokemon-oop-explorer"
+version = "0.1.0"
+description = "Textual TUI for exploring Pokemon OOP modeling (Gen 1-3 starters)."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "textual>=0.61.1",
+    "rich>=13.7.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.1.1",
+]
+
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pokemon_oop_explorer*"]
+
+[tool.setuptools.package-data]
+pokemon_oop_explorer = ["theme/*.tcss"]

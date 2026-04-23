@@ -1,0 +1,29 @@
+@startuml uc-7_trace_evolution
+!include ../../_theme.iuml
+
+title UC-7 — Trace evolution
+
+|Student|
+start
+:Select a species in a starter line;
+|System|
+:Read `species.evolution_line` and `evolution_rules`;
+repeat
+    :Describe next `EvolutionRule`
+    (`Level`, `Item`, `Friendship`,
+     `Trade`, `Location`, `TimeOfDay`,
+     or `CompositeEvolutionRule`);
+repeat while (more stages?) is (yes) not (no)
+|Student|
+:Focus the Evolution tab;
+|System|
+:Render ordered stages + short rule descriptions;
+|Student|
+if (Select an instance instead?) then (yes)
+    :Re-select to see `can_evolve_now`;
+    |System|
+    :Evaluate rules against level / friendship;
+endif
+stop
+
+@enduml

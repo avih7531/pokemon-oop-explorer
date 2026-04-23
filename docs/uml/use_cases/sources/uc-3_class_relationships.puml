@@ -1,0 +1,26 @@
+@startuml uc-3_class_relationships
+!include ../../_theme.iuml
+
+title UC-3 — View class relationships
+
+|Student|
+start
+:Select an object in the tree;
+|System|
+:`ClassGraphBuilder` walks `pokemon_oop_explorer`;
+:Run each `EdgeDetector` strategy
+(Inheritance / Composition / Aggregation);
+:Populate the `ClassGraph`;
+:Compose relationship panel from graph edges
+(Composes / Aggregates / References / Used By);
+:Render UML tab via `AsciiUmlRenderer`;
+|Student|
+if (Click on a related class name?) then (yes)
+    :Invoke `app.zoom_class(name)`;
+    |System|
+    :Re-render UML tab focused on the target class;
+    |Student|
+endif
+stop
+
+@enduml
