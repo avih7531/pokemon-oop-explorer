@@ -1,5 +1,7 @@
 # Pokemon OOP Explorer (Textual TUI)
 
+[![tests](https://github.com/avih7531/pokemon-oop-explorer/actions/workflows/tests.yml/badge.svg)](https://github.com/avih7531/pokemon-oop-explorer/actions/workflows/tests.yml)
+
 An object-oriented terminal explorer for Gen 1-3 starter families and evolutions.  
 This is intentionally not a generic Pokedex; it is a domain-modeling project focused on inheritance, composition, abstract interfaces, polymorphism, and clear architecture.
 
