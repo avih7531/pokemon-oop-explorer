@@ -20,7 +20,7 @@ This is intentionally not a generic Pokedex; it is a domain-modeling project foc
 - [Included Data Scope](#included-data-scope)
 - [Credits](#credits)
 
-> **IMPORTANT!** Your terminal must be **at least 49 rows tall and 171 columns wide** for the three-pane TUI layout (navigation / details / UML) to render without clipping or broken box-drawing. Resize your terminal before launching the app.
+> **IMPORTANT!** Your terminal must be **at least 48 rows tall and 146 columns wide** for the three-pane TUI layout (navigation / details / UML) to render without clipping or broken box-drawing. Resize your terminal before launching the app.
 >
 > **Recommended terminal:** [Kitty](https://sw.kovidgoyal.net/kitty/). It has excellent support for truecolor, Unicode box-drawing, and the ANSI sprite renderer the app uses, so colors and the UML diagrams display correctly. Other terminals will usually work but may dim the palette or break the sprite output.
 
