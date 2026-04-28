@@ -7,10 +7,8 @@ title UC-3 — View class relationships
 start
 :Select an object in the tree;
 |System|
-:`ClassGraphBuilder` walks `pokemon_oop_explorer`;
-:Run each `EdgeDetector` strategy
-(Inheritance / Composition / Aggregation);
-:Populate the `ClassGraph`;
+:Use prebuilt `ClassGraph`
+(created at app startup via `ClassGraphBuilder`);
 :Compose relationship panel from graph edges
 (Composes / Aggregates / References / Used By);
 :Render UML tab via `AsciiUmlRenderer`;

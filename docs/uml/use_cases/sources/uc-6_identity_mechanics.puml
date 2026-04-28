@@ -11,16 +11,14 @@ start
 (nested value object);
 :Compute `pid_high`, `pid_low`, `shiny_value`;
 :Evaluate `TID xor SID xor PID_high xor PID_low < 8`;
+:Resolve sprite variant from shiny result
+inside `SpriteService.load_for_instance`;
+:Load regular or shiny sprite during object render;
 :Populate the Identity tab;
 |Student|
 :Focus the Identity tab;
 |System|
-if (shiny_value < 8?) then (yes)
-    :Load shiny sprite via `SpriteService`;
-else (no)
-    :Load regular sprite;
-endif
-:Render sprite alongside identity payload;
+:Render sprite and identity payload side-by-side;
 stop
 
 @enduml

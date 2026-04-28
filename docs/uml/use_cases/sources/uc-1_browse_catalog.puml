@@ -5,7 +5,7 @@ title UC-1 — Browse the catalog
 
 |Student|
 start
-:Launch `pokemon-oop-explorer`;
+:Launch `python -m pokemon_oop_explorer.main`;
 |System|
 :Load cached PokeAPI data via `DomainRepository`;
 :Build navigation tree
