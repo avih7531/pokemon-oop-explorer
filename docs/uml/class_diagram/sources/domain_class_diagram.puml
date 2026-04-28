@@ -76,6 +76,54 @@ package "Pokemon Domain" {
     class TrainerIdentity
 }
 
+package "Moves & Effects" {
+    class Move {
+        +power : int | None
+        +accuracy : int | None
+        +pp : int
+        +move_type : Type
+        +category : MoveCategory
+        +effects : list[AbstractEffect]
+    }
+    class OffensiveMove {
+        +power : int
+        +accuracy : int
+    }
+    class PhysicalMove
+    class SpecialMove
+    class StatusMove
+
+    abstract class AbstractEffect {
+        +apply(context: EffectContext) : EffectResult
+    }
+    class DamageEffect {
+        +base_damage : int
+    }
+    class HealEffect {
+        +heal_amount : int
+        +target_self : bool
+    }
+    class StatusEffect {
+        +condition_factory : type[StatusCondition]
+    }
+    class StatStageEffect {
+        +stat : StatKind
+        +delta : int
+        +target_self : bool
+    }
+
+    class EffectContext {
+        +source : PokemonInstance
+        +target : PokemonInstance
+        +crit : bool
+    }
+    class EffectResult {
+        +effect_name : str
+        +message : str
+        +data : dict
+    }
+}
+
 package "Evolution Rules" {
     abstract class EvolutionRule {
         +target_species_key : str
@@ -151,6 +199,21 @@ PokemonInstance <|-- StarterPokemon
 StarterPokemon <|-- GrassStarterPokemon
 StarterPokemon <|-- FireStarterPokemon
 StarterPokemon <|-- WaterStarterPokemon
+
+AbstractDomainObject <|-- Move
+AbstractDomainObject <|-- AbstractEffect
+Move <|-- OffensiveMove
+Move <|-- StatusMove
+OffensiveMove <|-- PhysicalMove
+OffensiveMove <|-- SpecialMove
+AbstractEffect <|-- DamageEffect
+AbstractEffect <|-- HealEffect
+AbstractEffect <|-- StatusEffect
+AbstractEffect <|-- StatStageEffect
+Move "1" *-- "0..*" AbstractEffect : effects
+AbstractEffect ..> EffectContext : uses
+AbstractEffect ..> EffectResult : returns
+PokemonSpecies "1" *-- "0..*" Move : learnset
 
 EvolutionRule <|-- LevelEvolutionRule
 EvolutionRule <|-- FriendshipEvolutionRule
