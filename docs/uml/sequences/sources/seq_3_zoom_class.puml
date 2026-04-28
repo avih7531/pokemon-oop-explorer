@@ -1,0 +1,28 @@
+@startuml seq_3_zoom_class
+!include ../../_theme.iuml
+
+title Sequence - Zoom Into Class from UML Tab
+
+actor User
+participant "PokemonExplorerApp" as App
+participant "ClassGraph" as Graph
+participant "AsciiUmlRenderer" as Renderer
+participant "AutoScrollPanel(tab-uml)" as UmlPanel
+participant "TabbedContent(lower-tabs)" as Tabs
+
+User -> App: action_zoom_class(class_name)
+activate App
+App -> Graph: search target class by name
+alt class exists
+  App -> Renderer: render(graph, focus=target)
+  Renderer --> App: focused UML text
+  App -> UmlPanel: update(focused UML)
+  App -> Tabs: active = "uml"
+  App -> UmlPanel: scroll_home()
+  App -> UmlPanel: focus()
+else class missing
+  App -> App: notify(warning)
+end
+deactivate App
+
+@enduml

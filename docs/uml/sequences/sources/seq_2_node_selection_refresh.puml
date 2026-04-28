@@ -1,0 +1,54 @@
+@startuml seq_2_node_selection_refresh
+!include ../../_theme.iuml
+
+title Sequence - Node Selection and Panel Refresh
+
+actor User
+participant "Tree" as Tree
+participant "PokemonExplorerApp" as App
+participant "Inspectable obj" as Obj
+participant "detail_text()" as DetailPresenter
+participant "relationship_text()" as RelationPresenter
+participant "tab_sections()" as TabPresenter
+participant "SpriteService" as SpriteService
+participant "DetailPanel" as DetailPanel
+participant "RelationshipPanel" as RelationPanel
+participant "AutoScrollPanel (tabs)" as Tabs
+participant "SpritePanel" as SpritePanel
+
+User -> Tree: select node
+Tree -> App: on_tree_node_selected(event)
+activate App
+App -> App: _render_object(obj)
+
+App -> DetailPresenter: detail_text(obj)
+DetailPresenter -> Obj: inspect_payload()
+DetailPresenter --> App: formatted detail text
+App -> DetailPanel: update(text)
+
+App -> RelationPresenter: relationship_text(obj, graph)
+RelationPresenter --> App: relationship text
+App -> RelationPanel: update(text)
+
+App -> TabPresenter: tab_sections(obj, graph)
+TabPresenter --> App: moves/stats/identity/evolution/uml sections
+App -> Tabs: update(tab-moves)
+App -> Tabs: update(tab-stats)
+App -> Tabs: update(tab-identity)
+App -> Tabs: update(tab-evolution)
+App -> Tabs: update(tab-uml)
+
+alt obj is PokemonSpecies
+  App -> SpriteService: load_for_species(obj, shiny=False)
+  SpriteService --> App: sprite_text
+else obj is PokemonInstance
+  App -> SpriteService: load_for_instance(obj)
+  SpriteService --> App: sprite_text
+else obj is Trainer
+  App -> SpriteService: load_for_trainer(obj)
+  SpriteService --> App: sprite_text
+end
+App -> SpritePanel: show_sprite(sprite_text)
+deactivate App
+
+@enduml

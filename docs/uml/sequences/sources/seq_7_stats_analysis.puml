@@ -1,0 +1,32 @@
+@startuml seq_7_stats_analysis
+!include ../../_theme.iuml
+
+title Sequence - Stats Analysis (effective_stats)
+
+actor User
+participant "Tree" as Tree
+participant "PokemonExplorerApp" as App
+participant "tab_sections()" as Presenter
+participant "PokemonInstance" as Instance
+participant "PokemonSpecies" as Species
+participant "AutoScrollPanel(tab-stats)" as StatsTab
+
+User -> Tree: select PokemonInstance node
+Tree -> App: on_tree_node_selected(event)
+activate App
+App -> App: _render_object(instance)
+App -> Presenter: tab_sections(instance, graph)
+activate Presenter
+Presenter -> Instance: inspect_payload()
+activate Instance
+Instance -> Instance: effective_stats()
+Instance -> Species: base_stats.as_dict()
+Species --> Instance: base stat values
+Instance --> Presenter: payload["effective_stats"]
+deactivate Instance
+Presenter --> App: stats section JSON
+deactivate Presenter
+App -> StatsTab: update(sections["stats"])
+deactivate App
+
+@enduml

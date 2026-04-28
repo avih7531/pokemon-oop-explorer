@@ -54,8 +54,15 @@ Project/
 ├── docs/
 │   └── uml/
 │       ├── _theme.iuml
-│       └── use_cases/
-│           ├── images/    (overview + UC-1..UC-8 .png)
+│       ├── README.md      (render commands + layout)
+│       ├── use_cases/
+│       │   ├── images/    (overview + UC-1..UC-8 .png)
+│       │   └── sources/   (matching .puml sources)
+│       ├── class_diagram/
+│       │   ├── images/    (domain class diagram .png)
+│       │   └── sources/   (matching .puml source)
+│       └── sequences/
+│           ├── images/    (seq-1..seq-5 .png)
 │           └── sources/   (matching .puml sources)
 ├── proposal/
 │   └── PROJECT_PROPOSAL.md
@@ -145,6 +152,13 @@ The `UML` tab introspects the entire `pokemon_oop_explorer` package at startup v
 - Below the box: `--|>` parent list, `<|--` subclass list, `*--` composition edges, `o--` aggregation edges, plus a "Used By" inbound-edge list.
 - When nothing is selected, the tab renders a package-wide overview grouped by module.
 - No extra dependencies — the renderer is pure Python, driven by the same pluggable `EdgeDetector` strategies you can extend yourself.
+
+## UML Deliverables
+
+- **Use Cases (overview + activities):** [`docs/uml/use_cases/`](docs/uml/use_cases/)
+- **Class Diagram (implementation-aligned):** [`docs/uml/class_diagram/`](docs/uml/class_diagram/)
+- **Sequence Diagrams (implementation message flows):** [`docs/uml/sequences/`](docs/uml/sequences/)
+- **Shared PlantUML theme:** [`docs/uml/_theme.iuml`](docs/uml/_theme.iuml)
 
 ## Use Cases
 

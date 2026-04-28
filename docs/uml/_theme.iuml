@@ -1,13 +1,40 @@
-' Shared PlantUML skinparams using the Pokemon OOP Explorer palette.
-' Keep this file self-contained and include it from sibling diagrams
-' via !include ../_theme.iuml (or adjust the relative path).
-
 skinparam backgroundColor #242933
 skinparam defaultFontColor #E5E9F0
 skinparam defaultFontName "DejaVu Sans Mono"
 skinparam defaultFontSize 13
 skinparam roundCorner 8
 skinparam shadowing false
+skinparam dpi 160
+
+skinparam title {
+    FontColor #e279a1
+    FontSize 18
+}
+
+skinparam legend {
+    BackgroundColor #434C5E
+    BorderColor #a97ea1
+    FontColor #E5E9F0
+}
+
+skinparam note {
+    BackgroundColor #434C5E
+    BorderColor #a97ea1
+    FontColor #E5E9F0
+}
+
+skinparam arrow {
+    Color #88C0D0
+    FontColor #E5E9F0
+    Thickness 1.2
+}
+
+skinparam package {
+    BackgroundColor #434C5E
+    BorderColor #a97ea1
+    FontColor #88C0D0
+    FontSize 13
+}
 
 skinparam actorStyle awesome
 skinparam actor {
@@ -19,52 +46,44 @@ skinparam actor {
 
 skinparam usecase {
     BackgroundColor #5E81AC
-    BorderColor #88C0D0
+    BorderColor #a97ea1
     FontColor #ffffff
     FontSize 12
 }
 
-skinparam package {
-    BackgroundColor #2B3242
-    BorderColor #4C566A
-    FontColor #88C0D0
-    FontSize 13
-}
-
-skinparam arrow {
-    Color #88C0D0
-    FontColor #e7c173
-    Thickness 1.2
-}
-
-skinparam note {
+skinparam class {
     BackgroundColor #434C5E
-    BorderColor #4C566A
+    BorderColor #a97ea1
     FontColor #E5E9F0
+    HeaderBackgroundColor #5E81AC
+    HeaderFontColor #ffffff
+    AttributeFontColor #E5E9F0
+    StereotypeFontColor #88C0D0
 }
 
-skinparam title {
-    FontColor #e279a1
-    FontSize 18
+skinparam object {
+    BackgroundColor #434C5E
+    BorderColor #a97ea1
+    FontColor #E5E9F0
 }
 
 skinparam activity {
     BackgroundColor #5E81AC
-    BorderColor #88C0D0
+    BorderColor #a97ea1
     FontColor #ffffff
-    StartColor #97b67c
-    EndColor #b74e58
+    StartColor #88C0D0
+    EndColor #e279a1
     BarColor #a97ea1
     DiamondBackgroundColor #434C5E
-    DiamondBorderColor #e7c173
+    DiamondBorderColor #a97ea1
     DiamondFontColor #E5E9F0
     ArrowColor #88C0D0
-    ArrowFontColor #e7c173
+    ArrowFontColor #E5E9F0
 }
 
 skinparam partition {
-    BackgroundColor #2B3242
-    BorderColor #4C566A
+    BackgroundColor #434C5E
+    BorderColor #a97ea1
     FontColor #88C0D0
 }
 
@@ -73,12 +92,16 @@ skinparam sequence {
     ActorBorderColor #a97ea1
     ActorFontColor #E5E9F0
     ParticipantBackgroundColor #5E81AC
-    ParticipantBorderColor #88C0D0
+    ParticipantBorderColor #a97ea1
     ParticipantFontColor #ffffff
     LifeLineBackgroundColor #4C566A
     LifeLineBorderColor #4C566A
     ArrowColor #88C0D0
-    GroupBackgroundColor #2B3242
-    GroupBorderColor #4C566A
+    MessageAlign center
+    GroupBackgroundColor #434C5E
+    GroupBorderColor #a97ea1
     GroupFontColor #e279a1
+    DividerBackgroundColor #4C566A
+    DividerBorderColor #a97ea1
+    DividerFontColor #88C0D0
 }

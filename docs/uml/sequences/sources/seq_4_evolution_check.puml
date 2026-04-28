@@ -1,0 +1,28 @@
+@startuml seq_4_evolution_check
+!include ../../_theme.iuml
+
+title Sequence - Check Evolution Eligibility
+
+actor User
+participant "PokemonExplorerApp" as App
+participant "tab_sections()" as Presenter
+participant "PokemonInstance" as Instance
+participant "PokemonSpecies" as Species
+participant "EvolutionRule[*]" as Rule
+
+User -> App: select PokemonInstance node
+App -> Presenter: tab_sections(instance, graph)
+activate Presenter
+Presenter -> Instance: can_evolve()
+activate Instance
+Instance -> Species: evolution_rules
+loop for each rule in species.evolution_rules
+  Instance -> Rule: is_satisfied(level, friendship, ...)
+  Rule --> Instance: bool
+end
+Instance --> Presenter: can_evolve_now
+deactivate Instance
+Presenter --> App: evolution tab payload
+deactivate Presenter
+
+@enduml

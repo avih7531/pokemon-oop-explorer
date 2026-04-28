@@ -1,0 +1,27 @@
+@startuml seq_5_trainer_party_update
+!include ../../_theme.iuml
+
+title Sequence - Trainer Party Ownership Update
+
+participant "Trainer" as Trainer
+participant "PokemonInstance" as Instance
+
+== Add to party ==
+Trainer -> Trainer: add_to_party(instance)
+activate Trainer
+Trainer -> Trainer: party.append(instance)
+Trainer -> Instance: owner = self
+deactivate Trainer
+
+== Remove from party ==
+Trainer -> Trainer: remove_from_party(instance)
+activate Trainer
+alt instance in party
+  Trainer -> Trainer: party.remove(instance)
+  alt instance.owner is self
+    Trainer -> Instance: owner = None
+  end
+end
+deactivate Trainer
+
+@enduml

@@ -1,0 +1,40 @@
+@startuml seq_1_app_startup
+!include ../../_theme.iuml
+
+title Sequence - App Startup and Initial UML Overview
+
+actor User
+participant "main.run()" as Main
+participant "PokemonExplorerApp" as App
+participant "DomainRepository" as Repo
+participant "ClassGraphBuilder" as Builder
+participant "ClassGraph" as Graph
+participant "AsciiUmlRenderer" as Renderer
+participant "ClassUsageVisitor" as Visitor
+participant "Trainer / Instance / Species" as DomainObject
+
+User -> Main: run()
+Main -> App: __init__(project_root)
+activate App
+App -> Repo: DomainRepository(project_root)
+App -> Builder: ClassGraphBuilder("pokemon_oop_explorer")
+App -> Builder: build()
+Builder --> App: graph: ClassGraph
+App -> Renderer: AsciiUmlRenderer()
+deactivate App
+
+User -> App: on_mount()
+activate App
+App -> App: _build_navigation_tree()
+App -> App: _reset_panels_to_overview()
+App -> App: _render_overview_uml()
+App -> Visitor: ClassUsageVisitor()
+loop for each trainer/instance/species
+  App -> DomainObject: accept(visitor)
+  DomainObject -> Visitor: visit_*(...)
+end
+App -> Renderer: render(graph, focus=None)
+Renderer --> App: overview UML text
+deactivate App
+
+@enduml

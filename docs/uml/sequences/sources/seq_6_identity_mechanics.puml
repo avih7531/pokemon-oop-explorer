@@ -1,0 +1,31 @@
+@startuml seq_6_identity_mechanics
+!include ../../_theme.iuml
+
+title Sequence - Identity Mechanics (Shiny Inspection)
+
+actor User
+participant "Tree" as Tree
+participant "PokemonExplorerApp" as App
+participant "tab_sections()" as Presenter
+participant "PokemonInstance" as Instance
+participant "PokemonIdentity" as Identity
+participant "AutoScrollPanel(tab-identity)" as IdentityTab
+
+User -> Tree: select PokemonInstance node
+Tree -> App: on_tree_node_selected(event)
+activate App
+App -> App: _render_object(instance)
+App -> Presenter: tab_sections(instance, graph)
+activate Presenter
+Presenter -> Instance: inspect_payload()
+activate Instance
+Instance -> Identity: shiny_report()
+Identity --> Instance: shiny_data
+Instance --> Presenter: payload["identity"]
+deactivate Instance
+Presenter --> App: identity section JSON
+deactivate Presenter
+App -> IdentityTab: update(sections["identity"])
+deactivate App
+
+@enduml

@@ -1,0 +1,188 @@
+@startuml domain_class_diagram
+!include ../../_theme.iuml
+
+title Pokemon OOP Explorer - Class Diagram (Submission)
+
+hide empty members
+skinparam classAttributeIconSize 0
+
+package "Core Contracts" {
+    interface Inspectable {
+        +inspect_payload() : dict[str, Any]
+    }
+
+    class Entity {
+        +entity_id : str
+    }
+
+    abstract class AbstractDomainObject {
+        +name : str
+        +description : str
+        +inspect_payload() : dict[str, Any]
+        +accept(visitor: DomainVisitor) : None
+    }
+
+    interface Evolvable {
+        +can_evolve() : bool
+    }
+}
+
+package "Pokemon Domain" {
+    class PokemonSpecies {
+        +species_key : str
+        +dex_number : int
+        +generation : Generation
+        +learnset : Learnset
+        +evolution_rules : list[EvolutionRule]
+        +can_evolve() : bool
+        +accept(visitor: DomainVisitor) : None
+        +inspect_payload() : dict[str, Any]
+    }
+
+    class StarterSpecies
+    class GrassStarterSpecies
+    class FireStarterSpecies
+    class WaterStarterSpecies
+
+    class PokemonInstance {
+        +species : PokemonSpecies
+        +level : int
+        +friendship : int
+        +status : StatusCondition
+        +nature : Nature
+        +owner : Trainer
+        +can_evolve() : bool
+        +effective_stats() : dict[str, int]
+        +accept(visitor: DomainVisitor) : None
+        +inspect_payload() : dict[str, Any]
+    }
+
+    class StarterPokemon
+    class GrassStarterPokemon
+    class FireStarterPokemon
+    class WaterStarterPokemon
+
+    class Trainer {
+        +identity : TrainerIdentity
+        +party : list[PokemonInstance]
+        +add_to_party(instance: PokemonInstance) : None
+        +remove_from_party(instance: PokemonInstance) : None
+        +active_pokemon() : PokemonInstance
+        +accept(visitor: DomainVisitor) : None
+        +inspect_payload() : dict[str, Any]
+    }
+
+    class TrainerIdentity
+}
+
+package "Evolution Rules" {
+    abstract class EvolutionRule {
+        +target_species_key : str
+        +is_satisfied(...) : bool
+        +short_description() : str
+    }
+    class LevelEvolutionRule
+    class FriendshipEvolutionRule
+    class ItemEvolutionRule
+    class TradeEvolutionRule
+    class CompositeEvolutionRule {
+        +children : list[EvolutionRule]
+        +require_all : bool
+    }
+}
+
+package "Visitors" {
+    abstract class DomainVisitor {
+        +visit_species(species: PokemonSpecies) : None
+        +visit_instance(instance: PokemonInstance) : None
+        +visit_trainer(trainer: Trainer) : None
+    }
+    class ClassUsageVisitor {
+        +seen_classes : set[type]
+    }
+    class SummaryVisitor {
+        +species_count : int
+        +instance_count : int
+        +trainer_count : int
+    }
+}
+
+package "Application + Services" {
+    class PokemonExplorerApp {
+        +compose() : ComposeResult
+        +on_mount() : None
+        +on_tree_node_selected(...) : None
+        +action_zoom_class(class_name: str) : None
+        +action_unselect() : None
+    }
+
+    class DomainRepository {
+        +families : dict[str, list[PokemonSpecies]]
+        +species_by_key : dict[str, PokemonSpecies]
+        +instances : list[PokemonInstance]
+        +trainers : list[Trainer]
+        +all_inspectables() : list[Inspectable]
+    }
+
+    class SpriteService
+
+    class ClassGraphBuilder {
+        +build() : ClassGraph
+    }
+    class ClassGraph
+    interface EdgeDetector
+    class AsciiUmlRenderer
+}
+
+Entity <|-- AbstractDomainObject
+Inspectable <|.. AbstractDomainObject
+Evolvable <|.. PokemonSpecies
+Evolvable <|.. PokemonInstance
+
+AbstractDomainObject <|-- PokemonSpecies
+AbstractDomainObject <|-- PokemonInstance
+AbstractDomainObject <|-- Trainer
+PokemonSpecies <|-- StarterSpecies
+StarterSpecies <|-- GrassStarterSpecies
+StarterSpecies <|-- FireStarterSpecies
+StarterSpecies <|-- WaterStarterSpecies
+PokemonInstance <|-- StarterPokemon
+StarterPokemon <|-- GrassStarterPokemon
+StarterPokemon <|-- FireStarterPokemon
+StarterPokemon <|-- WaterStarterPokemon
+
+EvolutionRule <|-- LevelEvolutionRule
+EvolutionRule <|-- FriendshipEvolutionRule
+EvolutionRule <|-- ItemEvolutionRule
+EvolutionRule <|-- TradeEvolutionRule
+EvolutionRule <|-- CompositeEvolutionRule
+
+DomainVisitor <|-- ClassUsageVisitor
+DomainVisitor <|-- SummaryVisitor
+
+PokemonSpecies "1" *-- "0..*" EvolutionRule : evolution_rules
+PokemonInstance "1" --> "1" PokemonSpecies : species
+Trainer "1" o-- "0..*" PokemonInstance : party
+PokemonInstance --> Trainer : owner
+Trainer --> TrainerIdentity : identity
+
+PokemonSpecies ..> DomainVisitor : accept(visitor)
+PokemonInstance ..> DomainVisitor : accept(visitor)
+Trainer ..> DomainVisitor : accept(visitor)
+
+PokemonExplorerApp *-- DomainRepository
+PokemonExplorerApp *-- SpriteService
+PokemonExplorerApp *-- ClassGraphBuilder
+PokemonExplorerApp *-- AsciiUmlRenderer
+ClassGraphBuilder --> EdgeDetector : uses strategies
+ClassGraphBuilder --> ClassGraph : builds
+DomainRepository ..> Inspectable : returns
+
+legend right
+*-- composition
+o-- aggregation
+--|> inheritance
+..> dependency/message
+endlegend
+
+@enduml
