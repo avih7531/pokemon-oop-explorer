@@ -16,7 +16,7 @@ This is intentionally not a generic Pokedex; it is a domain-modeling project foc
 - [Project Tree](#project-tree)
 - [Interaction Model](#interaction-model)
 - [OOP Modeling Highlights](#oop-modeling-highlights)
-- [Auto UML Tab](#auto-uml-tab)
+- [UML](#uml)
 - [Use Cases](#use-cases)
 - [Included Data Scope](#included-data-scope)
 - [Credits](#credits)
@@ -28,6 +28,7 @@ This is intentionally not a generic Pokedex; it is a domain-modeling project foc
 ## Virtual Environment Setup
 
 ```bash
+python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
@@ -159,7 +160,9 @@ Project/
   - `SpriteAsset` abstraction for local ANSI sprite loading
 - Species-level and instance-level concerns are explicitly separated.
 
-## Auto UML Tab
+## UML
+
+### Auto UML Tab
 
 The `UML` tab introspects the entire `pokemon_oop_explorer` package at startup via `ClassGraphBuilder`, then renders a focused class diagram whenever you select something in the navigation tree:
 
@@ -168,7 +171,7 @@ The `UML` tab introspects the entire `pokemon_oop_explorer` package at startup v
 - When nothing is selected, the tab renders a package-wide overview grouped by module.
 - No extra dependencies — the renderer is pure Python, driven by the same pluggable `EdgeDetector` strategies you can extend yourself.
 
-## UML Deliverables
+### Deliverables
 
 - **Use Cases (overview + activities):** [`docs/uml/use_cases/`](docs/uml/use_cases/)
 - **Class Diagram (implementation-aligned):** [`docs/uml/class_diagram/`](docs/uml/class_diagram/)
