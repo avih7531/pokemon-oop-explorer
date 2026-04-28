@@ -12,6 +12,7 @@ This is intentionally not a generic Pokedex; it is a domain-modeling project foc
 - [Virtual Environment Setup](#virtual-environment-setup)
 - [Run The App](#run-the-app)
 - [Run Tests](#run-tests)
+- [Writeup](#writeup)
 - [Project Tree](#project-tree)
 - [Interaction Model](#interaction-model)
 - [OOP Modeling Highlights](#oop-modeling-highlights)
@@ -43,6 +44,17 @@ python -m pokemon_oop_explorer.main
 pytest -q
 ```
 
+## Writeup
+
+Project report files are in `writeup/`:
+
+```bash
+cd writeup
+make
+```
+
+This compiles `writeup/writeup.tex` into `writeup/writeup.pdf`.
+
 ## Project Tree
 
 ```text
@@ -54,7 +66,6 @@ Project/
 ├── docs/
 │   └── uml/
 │       ├── _theme.iuml
-│       ├── README.md      (render commands + layout)
 │       ├── use_cases/
 │       │   ├── images/    (overview + UC-1..UC-8 .png)
 │       │   └── sources/   (matching .puml sources)
@@ -62,8 +73,12 @@ Project/
 │       │   ├── images/    (domain class diagram .png)
 │       │   └── sources/   (matching .puml source)
 │       └── sequences/
-│           ├── images/    (seq-1..seq-5 .png)
+│           ├── images/    (seq-1..seq-7 .png)
 │           └── sources/   (matching .puml sources)
+├── writeup/
+│   ├── Makefile
+│   ├── writeup.tex
+│   └── writeup.pdf
 ├── proposal/
 │   └── PROJECT_PROPOSAL.md
 ├── sprites/

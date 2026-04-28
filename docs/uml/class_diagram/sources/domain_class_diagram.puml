@@ -2,6 +2,7 @@
 !include ../../_theme.iuml
 
 title Pokemon OOP Explorer - Class Diagram (Submission)
+scale max 3400 width
 
 hide empty members
 skinparam classAttributeIconSize 0
@@ -166,10 +167,6 @@ Trainer "1" o-- "0..*" PokemonInstance : party
 PokemonInstance --> Trainer : owner
 Trainer --> TrainerIdentity : identity
 
-PokemonSpecies ..> DomainVisitor : accept(visitor)
-PokemonInstance ..> DomainVisitor : accept(visitor)
-Trainer ..> DomainVisitor : accept(visitor)
-
 PokemonExplorerApp *-- DomainRepository
 PokemonExplorerApp *-- SpriteService
 PokemonExplorerApp *-- ClassGraphBuilder
@@ -177,12 +174,5 @@ PokemonExplorerApp *-- AsciiUmlRenderer
 ClassGraphBuilder --> EdgeDetector : uses strategies
 ClassGraphBuilder --> ClassGraph : builds
 DomainRepository ..> Inspectable : returns
-
-legend right
-*-- composition
-o-- aggregation
---|> inheritance
-..> dependency/message
-endlegend
 
 @enduml

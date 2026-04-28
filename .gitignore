@@ -25,3 +25,37 @@ dist/
 .idea/
 .DS_Store
 
+# LaTeX build artifacts (keep writeup source + PDF)
+writeup/*.aux
+writeup/*.log
+writeup/*.out
+writeup/*.toc
+writeup/*.lof
+writeup/*.lot
+writeup/*.lol
+writeup/*.idx
+writeup/*.ilg
+writeup/*.ind
+writeup/*.acn
+writeup/*.acr
+writeup/*.alg
+writeup/*.glg
+writeup/*.glo
+writeup/*.gls
+writeup/*.ist
+writeup/*.xdy
+writeup/*.fls
+writeup/*.fdb_latexmk
+writeup/*.synctex.gz
+writeup/*.nav
+writeup/*.snm
+writeup/*.vrb
+writeup/*.bbl
+writeup/*.blg
+writeup/*.bcf
+writeup/*.run.xml
+writeup/*.dvi
+writeup/*.ps
+writeup/*.xdv
+writeup/*.synctex(busy)
+
