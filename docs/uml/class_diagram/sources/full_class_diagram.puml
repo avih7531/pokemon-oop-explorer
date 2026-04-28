@@ -1,0 +1,639 @@
+@startuml full_class_diagram
+!include ../../_theme.iuml
+title Pokemon OOP Explorer - Full Class Diagram
+left to right direction
+skinparam classAttributeIconSize 0
+hide empty fields
+hide empty methods
+scale max 7800 width
+package "app" {
+  class "app.PokemonExplorerApp" as app__PokemonExplorerApp {
+    +TAB_ORDER : Any
+    +DETAIL_PLACEHOLDER : Any
+    +RELATIONSHIP_PLACEHOLDER : Any
+    +SPRITE_PLACEHOLDER : Any
+    +DATA_TAB_PLACEHOLDER : Any
+    +CSS_PATH : Any
+    +TITLE : Any
+    +SUB_TITLE : Any
+    +BINDINGS : Any
+    +current_object : reactive[Inspectable?]
+    --
+    -__init__(project_root: Path) : None
+    +compose() : ComposeResult
+    +on_mount() : None
+    -_reset_panels_to_overview() : None
+    -_build_navigation_tree() : None
+    -_render_overview_uml() : None
+    +on_tree_node_selected(event: Tree.NodeSelected[Inspectable]) : None
+    -_render_object(obj: Inspectable) : None
+    +action_zoom_class(class_name: str) : None
+    +action_unselect() : None
+    +action_focus_nav() : None
+    +action_focus_detail() : None
+    +action_focus_rel() : None
+    +action_focus_tabs() : None
+    +action_focus_uml() : None
+    -_switch_subtab(direction: int) : None
+    +action_next_subtab() : None
+    +action_prev_subtab() : None
+    +on_key(event: Key) : None
+  }
+}
+package "data" {
+  class "data.starter_seed.DomainCatalog" as data_starter_seed__DomainCatalog {
+    +species_by_key : dict[str, PokemonSpecies]
+    +families : dict[str, list[PokemonSpecies]]
+    +instances : list[PokemonInstance]
+    +trainers : list[Trainer]
+  }
+}
+package "introspect" {
+  class "introspect.ascii_renderer.AsciiUmlRenderer" as introspect_ascii_renderer__AsciiUmlRenderer {
+    +render(graph: ClassGraph, focus: type? = ...) : str
+    -_render_focus(graph: ClassGraph, focus: type) : str
+    -_render_overview(graph: ClassGraph) : str
+  }
+  abstract class "introspect.ascii_renderer.UmlRenderer" as introspect_ascii_renderer__UmlRenderer {
+    +render(graph: ClassGraph, focus: type? = ...) : str
+  }
+  class "introspect.class_graph.ClassGraph" as introspect_class_graph__ClassGraph {
+    +nodes : dict[type, ClassNode]
+    +edges : list[RelationshipEdge]
+    --
+    +add_node(node: ClassNode) : None
+    +add_edge(edge: RelationshipEdge) : None
+    +outgoing(cls: type) : list[RelationshipEdge]
+    +incoming(cls: type) : list[RelationshipEdge]
+    +neighbors(cls: type, depth: int = ...) : set[type]
+    +classes() : list[type]
+  }
+  class "introspect.class_graph.ClassGraphBuilder" as introspect_class_graph__ClassGraphBuilder {
+    -__init__(root_package: str | ModuleType, detectors: list[EdgeDetector]? = ...) : None
+    +build() : ClassGraph
+    -_resolve_module() : ModuleType
+    -_collect_classes(root_module: ModuleType) : set[type]
+  }
+  class "introspect.class_graph.ClassNode" as introspect_class_graph__ClassNode {
+    +cls : type
+    +fields : list[FieldInfo]
+    +methods : list[str]
+    +inherited_methods : list[str]
+    --
+    +name() : str
+    +module() : str
+  }
+  class "introspect.class_graph.FieldInfo" as introspect_class_graph__FieldInfo {
+    +name : str
+    +annotation : str
+  }
+  class "introspect.class_graph.RelationshipEdge" as introspect_class_graph__RelationshipEdge {
+    +source : type
+    +target : type
+    +kind : RelationshipKind
+    +label : str
+  }
+  enum "introspect.class_graph.RelationshipKind" as introspect_class_graph__RelationshipKind {
+    +INHERITS : Any
+    +COMPOSES : Any
+    +AGGREGATES : Any
+    +REFERENCES : Any
+    --
+    +glyph() : str
+  }
+  class "introspect.relationship_detector.AggregationDetector" as introspect_relationship_detector__AggregationDetector {
+    -_emit(cls: type, attr_name: str, target: type, inside_container: bool) : Iterable[RelationshipEdge]
+  }
+  class "introspect.relationship_detector.CompositionDetector" as introspect_relationship_detector__CompositionDetector {
+    -_emit(cls: type, attr_name: str, target: type, inside_container: bool) : Iterable[RelationshipEdge]
+  }
+  abstract class "introspect.relationship_detector.EdgeDetector" as introspect_relationship_detector__EdgeDetector {
+    +detect(cls: type, universe: set[type]) : Iterable[RelationshipEdge]
+  }
+  class "introspect.relationship_detector.InheritanceDetector" as introspect_relationship_detector__InheritanceDetector {
+    +detect(cls: type, universe: set[type]) : Iterable[RelationshipEdge]
+  }
+  abstract class "introspect.relationship_detector._DataclassFieldDetector" as introspect_relationship_detector___DataclassFieldDetector {
+    +detect(cls: type, universe: set[type]) : Iterable[RelationshipEdge]
+    -_emit(cls: type, attr_name: str, target: type, inside_container: bool) : Iterable[RelationshipEdge]
+  }
+}
+package "models" {
+  class "models.abilities.Ability" as models_abilities__Ability {
+    +effect_summary : str
+  }
+  class "models.abilities.PassiveAbility" as models_abilities__PassiveAbility {
+  }
+  class "models.abilities.TriggeredAbility" as models_abilities__TriggeredAbility {
+    +trigger_condition : str
+  }
+  abstract class "models.base.AbstractDomainObject" as models_base__AbstractDomainObject {
+    +name : str
+    +description : str
+    --
+    +inspect_payload() : dict[str, Any]
+    +accept(visitor: DomainVisitor) : None
+  }
+  abstract class "models.base.Entity" as models_base__Entity {
+    +entity_id : str
+  }
+  interface "models.base.Evolvable" as models_base__Evolvable {
+    +can_evolve() : bool
+  }
+  abstract class "models.base.Inspectable" as models_base__Inspectable {
+    +inspect_payload() : dict[str, Any]
+  }
+  class "models.effects.AbstractEffect" as models_effects__AbstractEffect {
+    +apply(context: EffectContext) : EffectResult
+  }
+  class "models.effects.DamageEffect" as models_effects__DamageEffect {
+    +base_damage : int
+    --
+    +apply(context: EffectContext) : EffectResult
+  }
+  class "models.effects.EffectContext" as models_effects__EffectContext {
+    +source : PokemonInstance
+    +target : PokemonInstance
+    +crit : bool
+  }
+  class "models.effects.EffectResult" as models_effects__EffectResult {
+    +effect_name : str
+    +message : str
+    +data : dict[str, Any]
+  }
+  class "models.effects.HealEffect" as models_effects__HealEffect {
+    +heal_amount : int
+    +target_self : bool
+    --
+    +apply(context: EffectContext) : EffectResult
+  }
+  class "models.effects.StatStageEffect" as models_effects__StatStageEffect {
+    +stat : StatKind
+    +delta : int
+    +target_self : bool
+    --
+    +apply(context: EffectContext) : EffectResult
+  }
+  class "models.effects.StatusEffect" as models_effects__StatusEffect {
+    +condition_factory : type[StatusCondition]?
+    --
+    +apply(context: EffectContext) : EffectResult
+  }
+  enum "models.enums.ElementType" as models_enums__ElementType {
+    +NORMAL : Any
+    +GRASS : Any
+    +FIRE : Any
+    +WATER : Any
+    +ELECTRIC : Any
+    +ICE : Any
+    +FIGHTING : Any
+    +POISON : Any
+    +GROUND : Any
+    +FLYING : Any
+    +PSYCHIC : Any
+    +BUG : Any
+    +ROCK : Any
+    +GHOST : Any
+    +DRAGON : Any
+    +DARK : Any
+    +STEEL : Any
+  }
+  enum "models.enums.Generation" as models_enums__Generation {
+    +GEN_1 : Any
+    +GEN_2 : Any
+    +GEN_3 : Any
+  }
+  enum "models.enums.ItemCategory" as models_enums__ItemCategory {
+    +HELD : Any
+    +CONSUMABLE : Any
+    +EVOLUTION : Any
+  }
+  enum "models.enums.MoveCategory" as models_enums__MoveCategory {
+    +PHYSICAL : Any
+    +SPECIAL : Any
+    +STATUS : Any
+  }
+  enum "models.enums.StatKind" as models_enums__StatKind {
+    +HP : Any
+    +ATTACK : Any
+    +DEFENSE : Any
+    +SPECIAL_ATTACK : Any
+    +SPECIAL_DEFENSE : Any
+    +SPEED : Any
+  }
+  class "models.evolution.CompositeEvolutionRule" as models_evolution__CompositeEvolutionRule {
+    +children : list[EvolutionRule]
+    +require_all : bool
+    --
+    +is_satisfied(level: int, friendship: int = ..., item_key: str? = ..., traded: bool = ..., location: str? = ..., time_of_day: EvolutionContextTimeOfDay = ...) : bool
+    +short_description() : str
+  }
+  enum "models.evolution.EvolutionContextTimeOfDay" as models_evolution__EvolutionContextTimeOfDay {
+    +DAY : Any
+    +NIGHT : Any
+    +ANY : Any
+  }
+  class "models.evolution.EvolutionRule" as models_evolution__EvolutionRule {
+    +target_species_key : str
+    --
+    +is_satisfied(level: int, friendship: int = ..., item_key: str? = ..., traded: bool = ..., location: str? = ..., time_of_day: EvolutionContextTimeOfDay = ...) : bool
+    +short_description() : str
+  }
+  class "models.evolution.FriendshipEvolutionRule" as models_evolution__FriendshipEvolutionRule {
+    +minimum_friendship : int
+    --
+    +is_satisfied(level: int, friendship: int = ..., item_key: str? = ..., traded: bool = ..., location: str? = ..., time_of_day: EvolutionContextTimeOfDay = ...) : bool
+    +short_description() : str
+  }
+  class "models.evolution.ItemEvolutionRule" as models_evolution__ItemEvolutionRule {
+    +required_item_key : str
+    --
+    +is_satisfied(level: int, friendship: int = ..., item_key: str? = ..., traded: bool = ..., location: str? = ..., time_of_day: EvolutionContextTimeOfDay = ...) : bool
+    +short_description() : str
+  }
+  class "models.evolution.LevelEvolutionRule" as models_evolution__LevelEvolutionRule {
+    +minimum_level : int
+    --
+    +is_satisfied(level: int, friendship: int = ..., item_key: str? = ..., traded: bool = ..., location: str? = ..., time_of_day: EvolutionContextTimeOfDay = ...) : bool
+    +short_description() : str
+  }
+  class "models.evolution.LocationEvolutionRule" as models_evolution__LocationEvolutionRule {
+    +required_location : str
+    --
+    +is_satisfied(level: int, friendship: int = ..., item_key: str? = ..., traded: bool = ..., location: str? = ..., time_of_day: EvolutionContextTimeOfDay = ...) : bool
+    +short_description() : str
+  }
+  class "models.evolution.TimeOfDayEvolutionRule" as models_evolution__TimeOfDayEvolutionRule {
+    +minimum_level : int
+    +required_time : EvolutionContextTimeOfDay
+    --
+    +is_satisfied(level: int, friendship: int = ..., item_key: str? = ..., traded: bool = ..., location: str? = ..., time_of_day: EvolutionContextTimeOfDay = ...) : bool
+    +short_description() : str
+  }
+  class "models.evolution.TradeEvolutionRule" as models_evolution__TradeEvolutionRule {
+    +required_held_item : str?
+    --
+    +is_satisfied(level: int, friendship: int = ..., item_key: str? = ..., traded: bool = ..., location: str? = ..., time_of_day: EvolutionContextTimeOfDay = ...) : bool
+    +short_description() : str
+  }
+  class "models.items.ConsumableItem" as models_items__ConsumableItem {
+    +category : ItemCategory
+  }
+  class "models.items.EvolutionItem" as models_items__EvolutionItem {
+    +category : ItemCategory
+  }
+  class "models.items.HeldItem" as models_items__HeldItem {
+    +category : ItemCategory
+  }
+  class "models.items.Item" as models_items__Item {
+    +category : ItemCategory
+  }
+  class "models.moves.Move" as models_moves__Move {
+    +power : int?
+    +accuracy : int?
+    +pp : int
+    +move_type : Type?
+    +category : MoveCategory
+    +effects : list[AbstractEffect]
+  }
+  class "models.moves.OffensiveMove" as models_moves__OffensiveMove {
+    +power : int
+    +accuracy : int
+  }
+  class "models.moves.PhysicalMove" as models_moves__PhysicalMove {
+    +category : MoveCategory
+  }
+  class "models.moves.SpecialMove" as models_moves__SpecialMove {
+    +category : MoveCategory
+  }
+  class "models.moves.StatusMove" as models_moves__StatusMove {
+    +category : MoveCategory
+    +power : int?
+  }
+  class "models.pokemon.BattleReadyPokemon" as models_pokemon__BattleReadyPokemon {
+    +ev_spread : dict[str, int]
+    --
+    +available_moves() : list[str]
+  }
+  class "models.pokemon.EvolutionStageSpecies" as models_pokemon__EvolutionStageSpecies {
+    +stage_index : int
+  }
+  class "models.pokemon.FireStarterPokemon" as models_pokemon__FireStarterPokemon {
+  }
+  class "models.pokemon.FireStarterSpecies" as models_pokemon__FireStarterSpecies {
+    +starter_kind : str
+  }
+  class "models.pokemon.GrassStarterPokemon" as models_pokemon__GrassStarterPokemon {
+  }
+  class "models.pokemon.GrassStarterSpecies" as models_pokemon__GrassStarterSpecies {
+    +starter_kind : str
+  }
+  class "models.pokemon.PokemonInstance" as models_pokemon__PokemonInstance {
+    +species : PokemonSpecies?
+    +nickname : str
+    +level : int
+    +current_hp : int
+    +move_slots : list[MoveSlot]
+    +held_item : HeldItem?
+    +chosen_ability : Ability?
+    +identity : PokemonIdentity?
+    +friendship : int
+    +status : StatusCondition?
+    +nature : Nature?
+    +owner : Trainer?
+    +stat_stages : dict[str, int]
+    --
+    +effective_stats() : dict[str, int]
+    +can_evolve() : bool
+    +display_name() : str
+    +accept(visitor: DomainVisitor) : None
+    +inspect_payload() : dict[str, Any]
+  }
+  class "models.pokemon.PokemonSpecies" as models_pokemon__PokemonSpecies {
+    +species_key : str
+    +dex_number : int
+    +generation : Generation
+    +types : list[Type]
+    +base_stats : StatBlock?
+    +possible_abilities : list[Ability]
+    +learnset : Learnset
+    +evolution_rules : list[EvolutionRule]
+    +sprite_asset : SpriteAsset?
+    +evolution_line : EvolutionLine?
+    --
+    +can_evolve() : bool
+    +accept(visitor: DomainVisitor) : None
+    +inspect_payload() : dict[str, Any]
+  }
+  class "models.pokemon.StarterPokemon" as models_pokemon__StarterPokemon {
+  }
+  class "models.pokemon.StarterSpecies" as models_pokemon__StarterSpecies {
+    +starter_kind : str
+  }
+  class "models.pokemon.WaterStarterPokemon" as models_pokemon__WaterStarterPokemon {
+  }
+  class "models.pokemon.WaterStarterSpecies" as models_pokemon__WaterStarterSpecies {
+    +starter_kind : str
+  }
+  class "models.status.BurnStatus" as models_status__BurnStatus {
+    +name : str
+    +description : str
+    +damage_per_turn : int
+    --
+    +tick(instance: PokemonInstance) : str
+  }
+  class "models.status.FreezeStatus" as models_status__FreezeStatus {
+    +name : str
+    +description : str
+    +thaw_chance : float
+    --
+    +tick(instance: PokemonInstance) : str
+    +can_act(instance: PokemonInstance) : bool
+  }
+  class "models.status.ParalysisStatus" as models_status__ParalysisStatus {
+    +name : str
+    +description : str
+    +skip_chance : float
+    --
+    +tick(instance: PokemonInstance) : str
+    +can_act(instance: PokemonInstance) : bool
+  }
+  class "models.status.PoisonStatus" as models_status__PoisonStatus {
+    +name : str
+    +description : str
+    +damage_per_turn : int
+    --
+    +tick(instance: PokemonInstance) : str
+  }
+  class "models.status.SleepStatus" as models_status__SleepStatus {
+    +name : str
+    +description : str
+    +turns_remaining : int
+    --
+    +tick(instance: PokemonInstance) : str
+    +can_act(instance: PokemonInstance) : bool
+  }
+  class "models.status.StatusCondition" as models_status__StatusCondition {
+    +tick(instance: PokemonInstance) : str
+    +can_act(instance: PokemonInstance) : bool
+  }
+  class "models.trainer.Trainer" as models_trainer__Trainer {
+    +identity : TrainerIdentity?
+    +party : list[PokemonInstance]
+    +badges : int
+    +home_town : str
+    +sprite_asset : SpriteAsset?
+    --
+    +add_to_party(instance: PokemonInstance) : None
+    +remove_from_party(instance: PokemonInstance) : None
+    +party_size() : int
+    +active_pokemon() : PokemonInstance?
+    +accept(visitor: DomainVisitor) : None
+    +inspect_payload() : dict[str, Any]
+  }
+  class "models.trainer.TrainerIdentity" as models_trainer__TrainerIdentity {
+    +trainer_id : int
+    +secret_id : int
+    +display_name : str
+  }
+  class "models.value_objects.AttackStat" as models_value_objects__AttackStat {
+    +kind() : StatKind
+  }
+  abstract class "models.value_objects.BaseStat" as models_value_objects__BaseStat {
+    +value : int
+    --
+    +kind() : StatKind
+  }
+  class "models.value_objects.DefenseStat" as models_value_objects__DefenseStat {
+    +kind() : StatKind
+  }
+  class "models.value_objects.EvolutionLine" as models_value_objects__EvolutionLine {
+    +stages : list[EvolutionLine.EvolutionStage]
+    --
+    +add_stage(species: PokemonSpecies, index: int, rule: EvolutionRule?) : None
+    +describe() : list[str]
+  }
+  class "models.value_objects.HPStat" as models_value_objects__HPStat {
+    +kind() : StatKind
+  }
+  class "models.value_objects.Learnset" as models_value_objects__Learnset {
+    +moves_by_level : dict[int, list[Move]]
+    --
+    +add_move(level: int, move: Move) : None
+    +moves_up_to_level(level: int) : list[Move]
+  }
+  class "models.value_objects.MoveSlot" as models_value_objects__MoveSlot {
+    +move : Move
+    +current_pp : int
+  }
+  class "models.value_objects.Nature" as models_value_objects__Nature {
+    +name : str
+    +boosted_stat : StatKind
+    +hindered_stat : StatKind
+    --
+    +is_neutral() : bool
+    +modifier_for(stat: StatKind) : float
+  }
+  class "models.value_objects.PokemonIdentity" as models_value_objects__PokemonIdentity {
+    +trainer_id : int
+    +secret_id : int
+    +personality_value : int
+    --
+    +shiny_report() : PokemonIdentity.ShinyComputation
+  }
+  class "models.value_objects.SpecialAttackStat" as models_value_objects__SpecialAttackStat {
+    +kind() : StatKind
+  }
+  class "models.value_objects.SpecialDefenseStat" as models_value_objects__SpecialDefenseStat {
+    +kind() : StatKind
+  }
+  class "models.value_objects.SpeedStat" as models_value_objects__SpeedStat {
+    +kind() : StatKind
+  }
+  class "models.value_objects.SpriteAsset" as models_value_objects__SpriteAsset {
+    +species_key : str
+    +regular_path : Path
+    +shiny_path : Path
+    --
+    +load(shiny: bool) : str
+  }
+  class "models.value_objects.StatBlock" as models_value_objects__StatBlock {
+    +hp : HPStat
+    +attack : AttackStat
+    +defense : DefenseStat
+    +special_attack : SpecialAttackStat
+    +special_defense : SpecialDefenseStat
+    +speed : SpeedStat
+    --
+    +as_dict() : dict[str, int]
+  }
+  class "models.value_objects.Type" as models_value_objects__Type {
+    +element : ElementType
+    --
+    -__str__() : str
+  }
+  class "models.visitor.ClassUsageVisitor" as models_visitor__ClassUsageVisitor {
+    -__init__() : None
+    -_note(obj: object) : None
+    +visit_species(species: PokemonSpecies) : None
+    +visit_instance(instance: PokemonInstance) : None
+    +visit_trainer(trainer: Trainer) : None
+  }
+  abstract class "models.visitor.DomainVisitor" as models_visitor__DomainVisitor {
+    +visit_species(species: PokemonSpecies) : None
+    +visit_instance(instance: PokemonInstance) : None
+    +visit_trainer(trainer: Trainer) : None
+    +visit_other(obj: object) : None
+  }
+  class "models.visitor.SummaryVisitor" as models_visitor__SummaryVisitor {
+    -__init__() : None
+    +visit_species(species: PokemonSpecies) : None
+    +visit_instance(instance: PokemonInstance) : None
+    +visit_trainer(trainer: Trainer) : None
+  }
+}
+package "services" {
+  class "services.repository.DomainRepository" as services_repository__DomainRepository {
+    -__init__(project_root: Path) : None
+    +families() : dict[str, list[PokemonSpecies]]
+    +species_by_key() : dict[str, PokemonSpecies]
+    +instances() : list[PokemonInstance]
+    +trainers() : list[Trainer]
+    +all_inspectables() : list[Inspectable]
+  }
+  class "services.sprite_service.SpriteService" as services_sprite_service__SpriteService {
+    +load_for_species(species: PokemonSpecies, shiny: bool = ...) : str
+    +load_for_instance(instance: PokemonInstance) : str
+    +load_for_trainer(trainer: Trainer) : str
+  }
+  class "services.stat_service.StatService" as services_stat_service__StatService {
+    +compute_effective_stats(instance: PokemonInstance) : dict[str, int]
+  }
+}
+package "ui" {
+  class "ui.widgets.panels.AutoScrollPanel" as ui_widgets_panels__AutoScrollPanel {
+    +can_focus : Any
+    +BINDINGS : Any
+    +_auto_scroll_step : Any
+    +_auto_scroll_interval_seconds : Any
+    --
+    +on_mount() : None
+    -_tick_auto_scroll() : None
+    +action_scroll_up_line() : None
+    +action_scroll_down_line() : None
+    +on_click(event: Click) : None
+    +on_mouse_scroll_up(event: MouseScrollUp) : None
+    +on_mouse_scroll_down(event: MouseScrollDown) : None
+  }
+  class "ui.widgets.panels.DetailPanel" as ui_widgets_panels__DetailPanel {
+    +DEFAULT_CSS : Any
+  }
+  class "ui.widgets.panels.RelationshipPanel" as ui_widgets_panels__RelationshipPanel {
+    +DEFAULT_CSS : Any
+  }
+  class "ui.widgets.panels.SpritePanel" as ui_widgets_panels__SpritePanel {
+    +show_sprite(sprite_text: str) : None
+  }
+}
+introspect_ascii_renderer__UmlRenderer <|-- introspect_ascii_renderer__AsciiUmlRenderer
+introspect_relationship_detector__EdgeDetector <|-- introspect_relationship_detector__InheritanceDetector
+introspect_relationship_detector__EdgeDetector <|-- introspect_relationship_detector___DataclassFieldDetector
+introspect_relationship_detector___DataclassFieldDetector <|-- introspect_relationship_detector__CompositionDetector
+introspect_relationship_detector___DataclassFieldDetector <|-- introspect_relationship_detector__AggregationDetector
+models_base__AbstractDomainObject <|-- models_abilities__Ability
+models_abilities__Ability <|-- models_abilities__PassiveAbility
+models_abilities__Ability <|-- models_abilities__TriggeredAbility
+models_base__Entity <|-- models_base__AbstractDomainObject
+models_base__Inspectable <|-- models_base__AbstractDomainObject
+models_base__AbstractDomainObject <|-- models_effects__AbstractEffect
+models_effects__AbstractEffect <|-- models_effects__DamageEffect
+models_effects__AbstractEffect <|-- models_effects__HealEffect
+models_effects__AbstractEffect <|-- models_effects__StatusEffect
+models_effects__AbstractEffect <|-- models_effects__StatStageEffect
+models_base__AbstractDomainObject <|-- models_evolution__EvolutionRule
+models_evolution__EvolutionRule <|-- models_evolution__LevelEvolutionRule
+models_evolution__EvolutionRule <|-- models_evolution__ItemEvolutionRule
+models_evolution__EvolutionRule <|-- models_evolution__FriendshipEvolutionRule
+models_evolution__EvolutionRule <|-- models_evolution__TradeEvolutionRule
+models_evolution__EvolutionRule <|-- models_evolution__LocationEvolutionRule
+models_evolution__EvolutionRule <|-- models_evolution__TimeOfDayEvolutionRule
+models_evolution__EvolutionRule <|-- models_evolution__CompositeEvolutionRule
+models_base__AbstractDomainObject <|-- models_items__Item
+models_items__Item <|-- models_items__HeldItem
+models_items__Item <|-- models_items__ConsumableItem
+models_items__Item <|-- models_items__EvolutionItem
+models_base__AbstractDomainObject <|-- models_moves__Move
+models_moves__Move <|-- models_moves__OffensiveMove
+models_moves__OffensiveMove <|-- models_moves__PhysicalMove
+models_moves__OffensiveMove <|-- models_moves__SpecialMove
+models_moves__Move <|-- models_moves__StatusMove
+models_base__AbstractDomainObject <|-- models_pokemon__PokemonSpecies
+models_pokemon__PokemonSpecies <|-- models_pokemon__StarterSpecies
+models_pokemon__StarterSpecies <|-- models_pokemon__GrassStarterSpecies
+models_pokemon__StarterSpecies <|-- models_pokemon__FireStarterSpecies
+models_pokemon__StarterSpecies <|-- models_pokemon__WaterStarterSpecies
+models_pokemon__PokemonSpecies <|-- models_pokemon__EvolutionStageSpecies
+models_base__AbstractDomainObject <|-- models_pokemon__PokemonInstance
+models_pokemon__PokemonInstance <|-- models_pokemon__StarterPokemon
+models_pokemon__StarterPokemon <|-- models_pokemon__GrassStarterPokemon
+models_pokemon__StarterPokemon <|-- models_pokemon__FireStarterPokemon
+models_pokemon__StarterPokemon <|-- models_pokemon__WaterStarterPokemon
+models_pokemon__PokemonInstance <|-- models_pokemon__BattleReadyPokemon
+models_base__AbstractDomainObject <|-- models_status__StatusCondition
+models_status__StatusCondition <|-- models_status__BurnStatus
+models_status__StatusCondition <|-- models_status__PoisonStatus
+models_status__StatusCondition <|-- models_status__ParalysisStatus
+models_status__StatusCondition <|-- models_status__SleepStatus
+models_status__StatusCondition <|-- models_status__FreezeStatus
+models_base__AbstractDomainObject <|-- models_trainer__Trainer
+models_value_objects__BaseStat <|-- models_value_objects__HPStat
+models_value_objects__BaseStat <|-- models_value_objects__AttackStat
+models_value_objects__BaseStat <|-- models_value_objects__DefenseStat
+models_value_objects__BaseStat <|-- models_value_objects__SpecialAttackStat
+models_value_objects__BaseStat <|-- models_value_objects__SpecialDefenseStat
+models_value_objects__BaseStat <|-- models_value_objects__SpeedStat
+models_visitor__DomainVisitor <|-- models_visitor__ClassUsageVisitor
+models_visitor__DomainVisitor <|-- models_visitor__SummaryVisitor
+ui_widgets_panels__AutoScrollPanel <|-- ui_widgets_panels__DetailPanel
+ui_widgets_panels__AutoScrollPanel <|-- ui_widgets_panels__RelationshipPanel
+@enduml

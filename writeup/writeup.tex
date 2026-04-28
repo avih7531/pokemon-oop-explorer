@@ -187,6 +187,122 @@ The implemented use cases are:
     \item UC-8 Preview sprites
 \end{itemize}
 
+\textbf{Use Case Description Tables (Reference Format)}\\
+\textit{Primary actor for all use cases: Student/Reviewer using the terminal
+application.}
+
+\subsubsection*{UC-1 Browse catalog}
+\begin{tabular}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+\hline
+\textbf{UC Reference Name/Number} & \textbf{UC-1 Browse catalog} \\
+\hline
+\textbf{Overview} & Open the app and navigate the tree by generation, family,
+and object type to locate species, instances, and trainers for inspection. \\
+\hline
+\textbf{Related use cases} & UC-2, UC-3, UC-4, UC-5, UC-6, UC-7, UC-8 \\
+\hline
+\textbf{Actors} & Student/Reviewer \\
+\hline
+\end{tabular}
+
+\subsubsection*{UC-2 Inspect domain objects}
+\begin{tabular}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+\hline
+\textbf{UC Reference Name/Number} & \textbf{UC-2 Inspect domain objects} \\
+\hline
+\textbf{Overview} & Select a domain object and review structured payload data
+including class context, typed fields, and object-specific details. \\
+\hline
+\textbf{Related use cases} & UC-1, UC-3, UC-4, UC-5, UC-6, UC-7, UC-8 \\
+\hline
+\textbf{Actors} & Student/Reviewer \\
+\hline
+\end{tabular}
+
+\subsubsection*{UC-3 View class relationships}
+\begin{tabular}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+\hline
+\textbf{UC Reference Name/Number} & \textbf{UC-3 View class relationships} \\
+\hline
+\textbf{Overview} & View inheritance and composition/aggregation links for the
+selected class using the relationship panel and UML-focused rendering. \\
+\hline
+\textbf{Related use cases} & UC-1, UC-2, UC-4, UC-5, UC-6, UC-7 \\
+\hline
+\textbf{Actors} & Student/Reviewer \\
+\hline
+\end{tabular}
+
+\subsubsection*{UC-4 Review moves and abilities}
+\begin{tabular}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+\hline
+\textbf{UC Reference Name/Number} & \textbf{UC-4 Review moves and abilities} \\
+\hline
+\textbf{Overview} & Open the Moves/Abilities tab to inspect learnsets, move
+slots, categories, and ability assignments for species and instances. \\
+\hline
+\textbf{Related use cases} & UC-1, UC-2, UC-5 \\
+\hline
+\textbf{Actors} & Student/Reviewer \\
+\hline
+\end{tabular}
+
+\subsubsection*{UC-5 Analyze stats}
+\begin{tabular}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+\hline
+\textbf{UC Reference Name/Number} & \textbf{UC-5 Analyze stats} \\
+\hline
+\textbf{Overview} & Open the Stats tab to inspect base stats and effective
+stat outputs after nature and status condition effects are applied. \\
+\hline
+\textbf{Related use cases} & UC-1, UC-2, UC-4, UC-6, UC-7 \\
+\hline
+\textbf{Actors} & Student/Reviewer \\
+\hline
+\end{tabular}
+
+\subsubsection*{UC-6 Explore identity mechanics}
+\begin{tabular}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+\hline
+\textbf{UC Reference Name/Number} & \textbf{UC-6 Explore identity mechanics} \\
+\hline
+\textbf{Overview} & Open the Identity tab to inspect identity labels and
+Gen-3-style shiny computation fields tied to each Pokemon instance. \\
+\hline
+\textbf{Related use cases} & UC-1, UC-2, UC-5, UC-8 \\
+\hline
+\textbf{Actors} & Student/Reviewer \\
+\hline
+\end{tabular}
+
+\subsubsection*{UC-7 Trace evolution}
+\begin{tabular}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+\hline
+\textbf{UC Reference Name/Number} & \textbf{UC-7 Trace evolution} \\
+\hline
+\textbf{Overview} & Open the Evolution tab to inspect evolution lines and
+evaluate rule-based evolution eligibility using context-aware constraints. \\
+\hline
+\textbf{Related use cases} & UC-1, UC-2, UC-3, UC-5 \\
+\hline
+\textbf{Actors} & Student/Reviewer \\
+\hline
+\end{tabular}
+
+\subsubsection*{UC-8 Preview sprites}
+\begin{tabular}{|p{0.30\textwidth}|p{0.62\textwidth}|}
+\hline
+\textbf{UC Reference Name/Number} & \textbf{UC-8 Preview sprites} \\
+\hline
+\textbf{Overview} & Display regular/shiny sprite output from local assets for
+selected instances, with fallback behavior when a sprite is unavailable. \\
+\hline
+\textbf{Related use cases} & UC-1, UC-2, UC-6 \\
+\hline
+\textbf{Actors} & Student/Reviewer \\
+\hline
+\end{tabular}
+
 \newpage
 \section*{System Design}
 
@@ -194,6 +310,7 @@ The implemented use cases are:
 Sequence diagrams are included for the main runtime interactions and logic
 paths, with method names aligned to implementation code:
 \begin{itemize}
+    \item \url{full_sequence_diagram.png}
     \item \url{seq_1_app_startup.png}
     \item \url{seq_2_node_selection_refresh.png}
     \item \url{seq_3_zoom_class.png}
@@ -205,11 +322,12 @@ paths, with method names aligned to implementation code:
 
 These sequences cover startup, selection rendering, UML focusing, evolution
 rule evaluation, trainer-party ownership updates, identity/shiny inspection,
-and effective stat computation.
+effective stat computation, and a full end-to-end interaction timeline.
 
 \subsection*{Class Diagram(s)}
 The class diagram is provided in:
 \begin{itemize}
+    \item \url{docs/uml/class_diagram/images/full_class_diagram.png}
     \item \url{docs/uml/class_diagram/images/domain_class_diagram.png}
 \end{itemize}
 
@@ -323,6 +441,11 @@ the diagrams emphasize architecture-critical behavior rather than every helper.
 \texttt{docs/uml/class\_diagram/images/}.}
 
 \begin{center}
+\includegraphics[width=\textwidth,keepaspectratio]{../docs/uml/class_diagram/images/full_class_diagram.png}
+\end{center}
+\textit{Full class diagram (all discovered project classes with attributes and method signatures).}
+
+\begin{center}
 \includegraphics[width=\textwidth,keepaspectratio]{../docs/uml/class_diagram/images/domain_class_diagram.png}
 \end{center}
 \textit{Implementation-aligned class diagram.}
@@ -331,6 +454,11 @@ the diagrams emphasize architecture-critical behavior rather than every helper.
 \subsection*{Sequence Diagrams}
 \textit{Most sequence diagrams are dense; zoom in or open the originals in
 \texttt{docs/uml/sequences/images/}.}
+
+\begin{center}
+\includegraphics[width=\textwidth,keepaspectratio]{../docs/uml/sequences/images/full_sequence_diagram.png}
+\end{center}
+\textit{Full clear sequence diagram: startup, selection, rendering, domain action, and reset flow.}
 
 \begin{center}
 \includegraphics[width=\textwidth,keepaspectratio]{../docs/uml/sequences/images/seq_1_app_startup.png}

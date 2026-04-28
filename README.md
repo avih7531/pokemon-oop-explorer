@@ -71,10 +71,10 @@ Project/
 │       │   ├── images/    (overview + UC-1..UC-8 .png)
 │       │   └── sources/   (matching .puml sources)
 │       ├── class_diagram/
-│       │   ├── images/    (domain class diagram .png)
-│       │   └── sources/   (matching .puml source)
+│       │   ├── images/    (domain + full class diagram .png)
+│       │   └── sources/   (matching .puml sources)
 │       └── sequences/
-│           ├── images/    (seq-1..seq-7 .png)
+│           ├── images/    (seq-1..seq-7 + full sequence .png)
 │           └── sources/   (matching .puml sources)
 ├── writeup/
 │   ├── Makefile

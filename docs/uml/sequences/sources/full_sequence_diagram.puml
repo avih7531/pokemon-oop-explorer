@@ -1,0 +1,130 @@
+@startuml full_sequence_diagram
+!include ../../_theme.iuml
+title Pokemon OOP Explorer - Full Clear Sequence Diagram
+
+autonumber
+hide footbox
+
+actor User
+participant "PokemonExplorerApp" as App
+participant "DomainRepository" as Repo
+participant "SpriteService" as SpriteSvc
+participant "ClassGraphBuilder" as GraphBuilder
+participant "ClassGraph" as Graph
+participant "ClassUsageVisitor" as Visitor
+participant "Tree[Inspectable]" as NavTree
+participant "DetailPanel" as Detail
+participant "RelationshipPanel" as Rel
+participant "SpritePanel" as SpritePanel
+participant "StatService" as StatSvc
+participant "PokemonSpecies" as Species
+participant "PokemonInstance" as Instance
+participant "Trainer" as Trainer
+participant "EvolutionRule" as EvoRule
+
+== Application Startup ==
+User -> App : launch application
+App -> Repo : __init__()
+App -> Repo : build_catalog()
+Repo --> App : DomainCatalog(species, instances, trainers)
+App -> GraphBuilder : __init__(root_package, detectors)
+App -> GraphBuilder : build()
+GraphBuilder --> App : ClassGraph
+App -> App : on_mount()
+App -> App : _build_navigation_tree()
+App -> NavTree : add_leaf(species/instances/trainers)
+App -> App : _render_overview_uml()
+App -> Visitor : __init__()
+loop each seeded domain object
+  App -> Species : accept(visitor) or\nApp -> Instance : accept(visitor) or\nApp -> Trainer : accept(visitor)
+  Species -> Visitor : visit_species(species)
+  Instance -> Visitor : visit_instance(instance)
+  Trainer -> Visitor : visit_trainer(trainer)
+end
+Visitor --> App : summary + sampled methods
+App -> Detail : update(overview text)
+App -> Rel : update(overview relationships)
+App -> SpritePanel : update(overview sprite/help)
+
+== Browse Catalog And Select Node ==
+User -> NavTree : select node(obj: Inspectable)
+NavTree -> App : on_tree_node_selected(event)
+App -> App : _render_object(obj)
+
+alt obj is PokemonSpecies
+  App -> Species : inspect_payload()
+  Species --> App : dict[str, Any]
+  App -> Detail : update(species payload)
+  App -> Rel : update(species family + evolution edges)
+  App -> SpritePanel : update("No sprite for species")
+
+  opt user opens evolution subtab
+    App -> Species : evolution_chain()
+    Species --> App : EvolutionLine
+    App -> Species : can_evolve(context)
+    Species --> App : bool
+    App -> Detail : update(evolution readiness)
+  end
+
+else obj is PokemonInstance
+  App -> Instance : inspect_payload()
+  Instance --> App : dict[str, Any]
+  App -> Detail : update(instance payload)
+
+  App -> SpriteSvc : load_for_instance(instance)
+  SpriteSvc --> App : SpriteAsset | None
+  App -> SpritePanel : update(sprite or fallback)
+
+  opt user opens stats subtab
+    App -> StatSvc : compare_baseline(instance)
+    StatSvc --> App : dict[str, int]
+    App -> Detail : update(stat deltas)
+  end
+
+  opt user opens identity subtab
+    App -> Instance : identity.label()
+    Instance --> App : str
+    App -> Detail : update(identity text)
+  end
+
+else obj is Trainer
+  App -> Trainer : inspect_payload()
+  Trainer --> App : dict[str, Any]
+  App -> Detail : update(trainer payload)
+  App -> Trainer : roster_summary()
+  Trainer --> App : list[str]
+  App -> Rel : update(party relationships)
+  App -> SpritePanel : update(trainer panel text)
+end
+
+== Mutation / Domain Action Example ==
+User -> App : add selected instance to trainer party
+App -> Trainer : add_to_party(pokemon: PokemonInstance)
+Trainer --> App : None
+App -> Trainer : inspect_payload()
+Trainer --> App : dict[str, Any]
+App -> Detail : refresh trainer payload
+
+== Evolution Rule Check Example ==
+User -> App : request evolution check
+App -> Species : can_evolve(context)
+Species -> EvoRule : can_evolve(species, context)
+EvoRule --> Species : bool
+Species --> App : bool
+App -> Detail : show result
+
+== Class Zoom ==
+User -> App : action_zoom_class(class_name)
+App -> Graph : neighbors(focus_cls, depth=1)
+Graph --> App : set[type]
+App -> Detail : update(ascii class neighborhood)
+App -> Rel : update(class links)
+
+== Clear Selection ==
+User -> App : action_unselect()
+App -> App : _reset_panels_to_overview()
+App -> Detail : update(overview)
+App -> Rel : update(overview)
+App -> SpritePanel : update(overview)
+
+@enduml
